@@ -1,0 +1,107 @@
+CRITICAL - 2023-11-15 09:24:03 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Dashboard\viewSalesDashboard.php on line 123.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/viewSalesDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(133): view('Dashboard/viewSalesDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewSalesDashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:25:25 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Dashboard\viewSalesDashboard.php on line 123.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/viewSalesDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(133): view('Dashboard/viewSalesDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewSalesDashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 22:07:28 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Config\Validation.php on line 107.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(19): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 22:08:41 --> Class "App\Models\MemberModel" not found
+in APPPATH\Controllers\MemberController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MemberController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-15 22:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-15 22:24:47 --> Undefined variable $memberModel
+in APPPATH\Controllers\MemberController.php on line 47.
+ 1 APPPATH\Controllers\MemberController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $memberModel', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 22:26:40 --> Undefined property: App\Controllers\MemberController::$memberModel
+in APPPATH\Controllers\MemberController.php on line 47.
+ 1 APPPATH\Controllers\MemberController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MemberController::$memberModel', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 22:27:03 --> Class "App\Controllers\Services" not found
+in APPPATH\Controllers\MemberController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 22:29:13 --> Undefined variable $config
+in APPPATH\Controllers\MemberController.php on line 33.
+ 1 APPPATH\Controllers\MemberController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-15 22:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 22:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-15 23:03:53 --> Class "App\Controllers\Services" not found
+in APPPATH\Controllers\MemberController.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-15 23:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-15 23:06:26 --> Class "App\Controllers\Services" not found
+in APPPATH\Controllers\MemberController.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->register()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-15 23:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-15 23:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

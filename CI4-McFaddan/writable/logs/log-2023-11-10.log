@@ -1,0 +1,1006 @@
+CRITICAL - 2023-11-10 15:34:57 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 32768 bytes)
+in APPPATH\Views\layouts\main.php on line 1.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-10 16:24:25 --> syntax error, unexpected identifier "rotected", expecting "function" or "const"
+in APPPATH\Controllers\AdminDashboardController.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:24:26 --> syntax error, unexpected identifier "rotected", expecting "function" or "const"
+in APPPATH\Controllers\AdminDashboardController.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:33:24 --> Unmatched '}'
+in APPPATH\Config\Validation.php on line 201.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(15): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:33:24 --> Unmatched '}'
+in APPPATH\Config\Validation.php on line 201.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(15): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:37:03 --> Undefined property: App\Controllers\AdminDashboardController::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 46.
+ 1 APPPATH\Controllers\AdminDashboardController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AdminDashboardController::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:39:03 --> Undefined property: CodeIgniter\Validation\Validation::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 47.
+ 1 APPPATH\Controllers\AdminDashboardController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:41:26 --> Unclosed '{' on line 12
+in APPPATH\Config\Validation.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:41:58 --> Unclosed '{' on line 12
+in APPPATH\Config\Validation.php on line 104.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:42:09 --> Unclosed '{' on line 12 does not match ']'
+in APPPATH\Config\Validation.php on line 102.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:42:45 --> Unclosed '{' on line 12
+in APPPATH\Config\Validation.php on line 105.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:42:58 --> Unclosed '{' on line 12 does not match ']'
+in APPPATH\Config\Validation.php on line 103.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Config\\Validation.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Validation')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Validation')
+ 4 SYSTEMPATH\Config\Factories.php(277): class_exists('Config\\Validation')
+ 5 SYSTEMPATH\Config\Factories.php(196): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Validation')
+ 6 SYSTEMPATH\Config\Factories.php(155): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Validation', [])
+ 7 SYSTEMPATH\Common.php(217): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Config\Services.php(815): config('Config\\Validation')
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::validation(null, false)
+10 SYSTEMPATH\BaseModel.php(332): CodeIgniter\Config\BaseService::__callStatic('validation', [...])
+11 SYSTEMPATH\Model.php(155): CodeIgniter\BaseModel->__construct(null)
+12 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Model->__construct()
+13 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+14 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+15 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:43:33 --> Undefined property: CodeIgniter\Validation\Validation::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 47.
+ 1 APPPATH\Controllers\AdminDashboardController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:43:54 --> Undefined property: CodeIgniter\Validation\Validation::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 47.
+ 1 APPPATH\Controllers\AdminDashboardController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:44:54 --> Undefined property: CodeIgniter\Validation\Validation::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 47.
+ 1 APPPATH\Controllers\AdminDashboardController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:45:11 --> Undefined property: CodeIgniter\Validation\Validation::$productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 47.
+ 1 APPPATH\Controllers\AdminDashboardController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$productInsertValidation', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:48:13 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\AdminDashboardController.php on line 82.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:48:24 --> Undefined constant Config\Validation::productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:52:50 --> Undefined constant Config\Validation::productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:55:35 --> Undefined constant Config\Validation::productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:57:11 --> Undefined constant Config\Validation::productInsertValidation
+in APPPATH\Controllers\AdminDashboardController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-10 16:58:02 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`)) in C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\CI4-McFaddan\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\CI4-McFaddan\app\Controllers\AdminDashboardController.php(65): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+#9 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CI4-McFaddan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-10 16:58:02 --> Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`productName`, `price`, `stockQuantity`, `color`, `categoryID`) VALUES (:productName:, :price:, :stockQuantity:, :color:, :categoryID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 16:58:57 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\AdminDashboardController.php on line 96.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-10 16:59:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`)) in C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\CI4-McFaddan\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\CI4-McFaddan\app\Controllers\AdminDashboardController.php(66): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+#9 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CI4-McFaddan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-10 16:59:08 --> Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`productName`, `price`, `stockQuantity`, `color`, `categoryID`) VALUES (:productName:, :price:, :stockQuantity:, :color:, :categoryID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(66): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-10 16:59:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`)) in C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\CI4-McFaddan\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\CI4-McFaddan\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\CI4-McFaddan\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\CI4-McFaddan\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\CI4-McFaddan\app\Controllers\AdminDashboardController.php(65): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+#9 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CI4-McFaddan\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-10 16:59:22 --> Cannot add or update a child row: a foreign key constraint fails (`mcfaddan`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`categoryID`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`productName`, `price`, `stockQuantity`, `color`, `categoryID`) VALUES (:productName:, :price:, :stockQuantity:, :color:, :categoryID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(65): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:02:10 --> Undefined array key "stock"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 APPPATH\Views\productsDashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:04:13 --> Undefined array key "stock"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 APPPATH\Views\productsDashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:05:56 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:08:50 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:09:21 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 111.
+ 1 APPPATH\Views\productsDashboard.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 111)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:09:25 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 111.
+ 1 APPPATH\Views\productsDashboard.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 111)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(78): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:26 --> Undefined array key "stock"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 APPPATH\Views\productsDashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:26 --> Undefined array key "stock"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 APPPATH\Views\productsDashboard.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stock"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:45 --> Unmatched ')'
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:45 --> Unmatched ')'
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:55 --> syntax error, unexpected token ";"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:18:56 --> syntax error, unexpected token ";"
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:19:01 --> Unmatched ')'
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:19:01 --> Unmatched ')'
+in APPPATH\Views\productsDashboard.php on line 104.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:06 --> Undefined array key "productId"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productId"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:06 --> Undefined array key "productId"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "productId"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:33 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:33 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:59 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:22:59 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 110.
+ 1 APPPATH\Views\productsDashboard.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 110)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:27:11 --> Unclosed '{' on line 8
+in APPPATH\Controllers\AdminDashboardController.php on line 119.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:27:11 --> Unclosed '{' on line 8
+in APPPATH\Controllers\AdminDashboardController.php on line 119.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:29:55 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:29:56 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(32): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewProductsDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:33:39 --> Too few arguments to function App\Controllers\AdminDashboardController::updateProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:33:39 --> Too few arguments to function App\Controllers\AdminDashboardController::updateProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:34:51 --> Too few arguments to function App\Controllers\AdminDashboardController::updateProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:34:52 --> Too few arguments to function App\Controllers\AdminDashboardController::updateProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:39:20 --> Undefined variable $product
+in APPPATH\Views\addProductDashboard.php on line 185.
+ 1 APPPATH\Views\addProductDashboard.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\addProductDashboard.php', 185)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\addProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('addProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(47): view('addProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewAddProductDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:39:20 --> Undefined variable $product
+in APPPATH\Views\addProductDashboard.php on line 185.
+ 1 APPPATH\Views\addProductDashboard.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\addProductDashboard.php', 185)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\addProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('addProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(47): view('addProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewAddProductDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:44:59 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:45:46 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:45:49 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:46:43 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:46:46 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:46:59 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 116.
+ 1 APPPATH\Views\productsDashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 116)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:47:02 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 116.
+ 1 APPPATH\Views\productsDashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 116)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:47:28 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:47:57 --> Undefined array key "id"
+in APPPATH\Views\productsDashboard.php on line 113.
+ 1 APPPATH\Views\productsDashboard.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php', 113)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\productsDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('productsDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(85): view('productsDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->addProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:48:32 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:48:32 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:49:14 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:49:15 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 17:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:56:55 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 134.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:56:56 --> Too few arguments to function App\Controllers\AdminDashboardController::deleteProduct(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AdminDashboardController.php on line 134.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->deleteProduct()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 17:57:10 --> Undefined variable $product
+in APPPATH\Views\updateProductDashboard.php on line 93.
+ 1 APPPATH\Views\updateProductDashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(56): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewUpdateProduct('24')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:57:10 --> Undefined variable $product
+in APPPATH\Views\updateProductDashboard.php on line 93.
+ 1 APPPATH\Views\updateProductDashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(56): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewUpdateProduct('24')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:57:56 --> Unclosed '{' on line 8
+in APPPATH\Models\AdminDashboardModel.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminDashboardModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminDashboardModel')
+ 3 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminDashboardModel')
+ 4 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:57:56 --> Unclosed '{' on line 8
+in APPPATH\Models\AdminDashboardModel.php on line 41.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminDashboardModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminDashboardModel')
+ 3 APPPATH\Controllers\AdminDashboardController.php(17): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminDashboardModel')
+ 4 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:58:05 --> Undefined variable $product
+in APPPATH\Views\updateProductDashboard.php on line 93.
+ 1 APPPATH\Views\updateProductDashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(56): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewUpdateProduct('24')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 17:58:05 --> Undefined variable $product
+in APPPATH\Views\updateProductDashboard.php on line 93.
+ 1 APPPATH\Views\updateProductDashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(56): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewUpdateProduct('24')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-10 18:00:00 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:00:01 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:02:50 --> Too few arguments to function CodeIgniter\Validation\Validation::hasError(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\app\Views\updateProductDashboard.php on line 95 and exactly 1 expected
+in SYSTEMPATH\Validation\Validation.php on line 813.
+ 1 APPPATH\Views\updateProductDashboard.php(95): CodeIgniter\Validation\Validation->hasError()
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:02:50 --> Too few arguments to function CodeIgniter\Validation\Validation::hasError(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\app\Views\updateProductDashboard.php on line 95 and exactly 1 expected
+in SYSTEMPATH\Validation\Validation.php on line 813.
+ 1 APPPATH\Views\updateProductDashboard.php(95): CodeIgniter\Validation\Validation->hasError()
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:03:36 --> Too few arguments to function CodeIgniter\Validation\Validation::hasError(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\app\Views\updateProductDashboard.php on line 95 and exactly 1 expected
+in SYSTEMPATH\Validation\Validation.php on line 813.
+ 1 APPPATH\Views\updateProductDashboard.php(95): CodeIgniter\Validation\Validation->hasError()
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:03:36 --> Too few arguments to function CodeIgniter\Validation\Validation::hasError(), 0 passed in C:\xampp\htdocs\CI4-McFaddan\app\Views\updateProductDashboard.php on line 95 and exactly 1 expected
+in SYSTEMPATH\Validation\Validation.php on line 813.
+ 1 APPPATH\Views\updateProductDashboard.php(95): CodeIgniter\Validation\Validation->hasError()
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\updateProductDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:03:49 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:03:49 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:22 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\updateProductDashboard.php on line 101.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:22 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\updateProductDashboard.php on line 101.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:35 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\updateProductDashboard.php on line 101.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:35 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\updateProductDashboard.php on line 101.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:40 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:04:40 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:05:20 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:05:20 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:05:56 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-10 18:05:56 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+in APPPATH\Views\updateProductDashboard.php on line 95.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('updateProductDashboard', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(138): view('updateProductDashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->updateProduct('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-10 18:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 18:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 18:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 18:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-10 18:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

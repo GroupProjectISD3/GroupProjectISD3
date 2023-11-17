@@ -1,0 +1,971 @@
+CRITICAL - 2023-11-14 18:04:08 --> syntax error, unexpected token "else", expecting end of file
+in APPPATH\Views\Dashboard\viewAllMembersDashboard.php on line 110.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/viewAllMembersDashboard', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(104): view('Dashboard/viewAllMembersDashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewMembersDashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:04:46 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 21.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:05:55 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 102.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 102)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:07:05 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 102.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 102)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:07:06 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 102.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 102)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:07:07 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 102.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 102)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:10:38 --> Undefined variable $pager
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 116.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 116)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:12:21 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:27 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:28 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:29 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:30 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:30 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:30 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:30 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:31 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:20:41 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:22:22 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\AdminDashboardController.php on line 117.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('AdminDashboardController/getMemberAddress/1', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('AdminDashboardController/getMemberAddress/1')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('AdminDashboardController/getMemberAddress/1')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:22:40 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:22:40 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:24:50 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:24:50 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:24:54 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:24:54 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:24:56 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:24:56 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:25:58 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:25:58 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:26:00 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:26:00 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:26:01 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:26:01 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:26:54 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:26:54 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 105.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:27:10 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+DEBUG - 2023-11-14 19:29:05 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:29:05 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:34:41 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:34:41 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:35:06 --> Array
+(
+    [0] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A Thomond Village, Old Cratloe Road
+            [address2] => 12A Thomond Village, Old Cratloe Road
+            [address3] => 12A Thomond Village, Old Cratloe Road
+            [city] => Limerick 
+            [county] => Limerick
+            [eircode] => V94 A0T0
+        )
+
+    [1] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A thomonddd
+            [address2] => 12A thomonddd
+            [address3] => 12A thomonddd
+            [city] => 12A thomonddd
+            [county] => 12A thomonddd
+            [eircode] => 12A thomonddd
+        )
+
+)
+
+CRITICAL - 2023-11-14 19:35:06 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:37:40 --> Array
+(
+    [0] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A Thomond Village, Old Cratloe Road
+            [address2] => 12A Thomond Village, Old Cratloe Road
+            [address3] => 12A Thomond Village, Old Cratloe Road
+            [city] => Limerick 
+            [county] => Limerick
+            [eircode] => V94 A0T0
+        )
+
+    [1] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A thomonddd
+            [address2] => 12A thomonddd
+            [address3] => 12A thomonddd
+            [city] => 12A thomonddd
+            [county] => 12A thomonddd
+            [eircode] => 12A thomonddd
+        )
+
+)
+
+CRITICAL - 2023-11-14 19:37:40 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:37:41 --> Array
+(
+    [0] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A Thomond Village, Old Cratloe Road
+            [address2] => 12A Thomond Village, Old Cratloe Road
+            [address3] => 12A Thomond Village, Old Cratloe Road
+            [city] => Limerick 
+            [county] => Limerick
+            [eircode] => V94 A0T0
+        )
+
+    [1] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A thomonddd
+            [address2] => 12A thomonddd
+            [address3] => 12A thomonddd
+            [city] => 12A thomonddd
+            [county] => 12A thomonddd
+            [eircode] => 12A thomonddd
+        )
+
+)
+
+CRITICAL - 2023-11-14 19:37:41 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:37:42 --> Array
+(
+    [0] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A Thomond Village, Old Cratloe Road
+            [address2] => 12A Thomond Village, Old Cratloe Road
+            [address3] => 12A Thomond Village, Old Cratloe Road
+            [city] => Limerick 
+            [county] => Limerick
+            [eircode] => V94 A0T0
+        )
+
+    [1] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A thomonddd
+            [address2] => 12A thomonddd
+            [address3] => 12A thomonddd
+            [city] => 12A thomonddd
+            [county] => 12A thomonddd
+            [eircode] => 12A thomonddd
+        )
+
+)
+
+CRITICAL - 2023-11-14 19:37:42 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:37:42 --> Array
+(
+    [0] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A Thomond Village, Old Cratloe Road
+            [address2] => 12A Thomond Village, Old Cratloe Road
+            [address3] => 12A Thomond Village, Old Cratloe Road
+            [city] => Limerick 
+            [county] => Limerick
+            [eircode] => V94 A0T0
+        )
+
+    [1] => Array
+        (
+            [memberID] => 1
+            [address1] => 12A thomonddd
+            [address2] => 12A thomonddd
+            [address3] => 12A thomonddd
+            [city] => 12A thomonddd
+            [county] => 12A thomonddd
+            [eircode] => 12A thomonddd
+        )
+
+)
+
+CRITICAL - 2023-11-14 19:37:42 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:38:08 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Models\AdminMemberInfo.php on line 23.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:40:11 --> Undefined variable $query
+in APPPATH\Models\AdminMemberInfo.php on line 17.
+ 1 APPPATH\Models\AdminMemberInfo.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminMemberInfo.php', 17)
+ 2 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:40:36 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 22.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:40:58 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 20.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:41:36 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 20.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:41:38 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 20.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:41:38 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 20.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer('1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:41:50 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:41:50 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:47:36 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:47:36 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-14 19:47:37 --> Array
+(
+    [memberID] => 1
+    [address1] => 12A Thomond Village, Old Cratloe Road
+    [address2] => 12A Thomond Village, Old Cratloe Road
+    [address3] => 12A Thomond Village, Old Cratloe Road
+    [city] => Limerick 
+    [county] => Limerick
+    [eircode] => V94 A0T0
+)
+
+CRITICAL - 2023-11-14 19:47:37 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(117): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:16 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:17 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:17 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:17 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:27 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:27 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:27 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:28 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:28 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:28 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:29 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:48:29 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(116): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:05 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:06 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:06 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:07 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:07 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:49:07 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:56:29 --> syntax error, unexpected token "return"
+in APPPATH\Models\AdminMemberInfo.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminMemberInfo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminMemberInfo')
+ 3 APPPATH\Controllers\AdminDashboardController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminMemberInfo')
+ 4 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:56:42 --> syntax error, unexpected token "return"
+in APPPATH\Models\AdminMemberInfo.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminMemberInfo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminMemberInfo')
+ 3 APPPATH\Controllers\AdminDashboardController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminMemberInfo')
+ 4 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:56:56 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:58:13 --> syntax error, unexpected variable "$query"
+in APPPATH\Models\AdminMemberInfo.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Models\\AdminMemberInfo.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminMemberInfo')
+ 3 APPPATH\Controllers\AdminDashboardController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminMemberInfo')
+ 4 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\AdminDashboardController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:58:24 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 19:59:58 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Models\AdminMemberInfo.php on line 21.
+ 1 APPPATH\Controllers\AdminDashboardController.php(111): App\Models\AdminMemberInfo->getCustomer(1)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 20:00:59 --> Cannot access offset of type string on string
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 4 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 20:03:27 --> Trying to access array offset on value of type int
+in APPPATH\Views\Dashboard\memberAddressAdmin.php on line 104.
+ 1 APPPATH\Views\Dashboard\memberAddressAdmin.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php', 104)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\memberAddressAdmin.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/memberAddressAdmin', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(114): view('Dashboard/memberAddressAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->getMemberAddress('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 21:05:21 --> Undefined variable $categoryData
+in APPPATH\Views\Dashboard\viewSalesDashboard.php on line 106.
+ 1 APPPATH\Views\Dashboard\viewSalesDashboard.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryData', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\viewSalesDashboard.php', 106)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Views\\Dashboard\\viewSalesDashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Dashboard/viewSalesDashboard', [], true)
+ 5 APPPATH\Controllers\AdminDashboardController.php(121): view('Dashboard/viewSalesDashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewSalesDashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-14 21:06:22 --> Undefined property: App\Controllers\AdminDashboardController::$yourModel
+in APPPATH\Controllers\AdminDashboardController.php on line 121.
+ 1 APPPATH\Controllers\AdminDashboardController.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AdminDashboardController::$yourModel', 'C:\\xampp\\htdocs\\CI4-McFaddan\\app\\Controllers\\AdminDashboardController.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AdminDashboardController->viewSalesDashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
