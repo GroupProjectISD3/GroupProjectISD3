@@ -118,7 +118,7 @@ $controller_base = $base."index.php/";
         </div>
     <?php endif; ?>
     <section class="container mt-5">
-    <h2>New User Registration</h2>
+    <h2>Login</h2>
     <?php echo form_open('LoginController/authenticate'); ?>
         
         <div class="form-group">
