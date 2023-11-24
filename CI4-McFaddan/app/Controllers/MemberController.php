@@ -173,7 +173,7 @@ class MemberController extends BaseController{
                 //Render view with validator errors
                 echo view('portal', $data);
             }else{
-                // Hash the password (you might want to use CodeIgniter's password_hash function)
+                // Hash the password with CodeIgniter's password_hash function
                 $hashedPassword = hash('sha256', $this->request->getPost('newPassword'));
 
                 // Register the member

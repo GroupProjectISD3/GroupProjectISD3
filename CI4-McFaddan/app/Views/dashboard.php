@@ -58,18 +58,13 @@ $controller_base = $base."dashboard.php/";
                     </li>
 					 <li class="nav-item">
                         <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
-                            <i class="fas fa-chart-line me-2"></i>
+                            <!--fas fa-shopping-cart me-2-->
+                            <i class="fas fa-box-open me-2"></i>
                             Products
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
-                            <i class="fas fa-users me-2"></i>
-                            Administrators
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewStaffsDashboard') ?>">
                             <i class="fas fa-users-cog me-2"></i>
                             Staff
                         </a>
@@ -81,7 +76,7 @@ $controller_base = $base."dashboard.php/";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewSalesDashboard') ?>">
                             <i class="fas fa-chart-line me-2"></i>
                             Sales
                         </a>
@@ -112,22 +107,14 @@ $controller_base = $base."dashboard.php/";
                         <?php endif; ?>
 
             <div class="row">
-                <!-- Administrators Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Administrators</h2>
-                            <a href="<?= base_url('') ?>"  class="btn btn-primary">Manage Administrators</a>
-                        </div>
-                    </div>
-                </div>
+            
 
                 <!-- Staff Section -->
                 <div class="col-lg-4">
                     <div class="card mb-4 d-flex flex-column">
                         <div class="card-body">
                             <h2 class="card-title">Staff</h2>
-                           <a href="<?= base_url('') ?>"  class="btn btn-primary">Manage Staff</a>
+                           <a href="<?= base_url('viewStaffsDashboard') ?>"  class="btn btn-primary">Manage Staff</a>
                         </div>
                     </div>
                 </div>

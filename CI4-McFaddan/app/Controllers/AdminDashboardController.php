@@ -6,6 +6,7 @@ use App\Models\AdminDashboardModel; // Updated model name here
 use CodeIgniter\Controller;
 use App\Models\AdminMemberInfo;
 use App\Models\MemberModel;
+use App\Models\StaffMemberInfo;
 
 
 class AdminDashboardController extends BaseController{
@@ -22,6 +23,9 @@ class AdminDashboardController extends BaseController{
 
         //Instance of the admin member info model
         $this->adminMemberInfo = new AdminMemberInfo();
+
+        //Instance of the staff member info model
+        $this->staffMemberInfo = new StaffMemberInfo();
 
         $this->MemberModel = new MemberModel();
 
@@ -133,6 +137,87 @@ public function memberlogin() {
         echo view('Dashboard/viewAllMembersDashboard', $members); //Display view with records and pager info
     }
 
+    //Staff details
+    public function viewStaffsDashboard(){
+        $staffs = [ 'staffs' => $this->staffMemberInfo->paginate(15), //no. of records to display
+        'pager' => $this->staffMemberInfo->pager ]; //Pager class info
+        
+        echo view('Dashboard/viewAllStaffsDashboard', $staffs); //Display view with records and pager info
+    }
+    
+
+    //View AddNewStaff
+    public function viewAddNewStaff(){
+        echo view('Dashboard/addNewStaff');
+    }
+
+
+    //Delete Staff
+    public function deleteStaff($id){
+        $result = $this->staffMemberInfo->deleteStaff($id);
+
+        if ($result) {
+            return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
+        } else {
+            return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
+        }
+    }
+
+
+
+    //Add Staffs
+    public function addNewStaff(){
+        //Load the validation service
+        $validation = \Config\Services::validation();
+
+                //if the addNewStaff button is clicked
+        if(isset($_POST['addNewStaff'])){
+            //If validation does not pass
+            if (!$this->validate('staffInsertValidation')) {
+                // Get validator details
+                $data['validation'] = $this->validator;
+
+                //Render view with validator errors
+                echo view('Dashboard/addNewStaff', $data);
+            }else{
+                // Hash the password with CodeIgniter's password_hash function
+                $hashedPassword = hash('sha256', $this->request->getPost('password'));
+
+
+                // Register Staff
+                $staff = $this->staffMemberInfo->registerStaff(
+                    $this->request->getPost('firstname'),
+                    $this->request->getPost('lastname'),
+                    $this->request->getPost('email'),
+                    $this->request->getPost('phone'),
+                    $this->request->getPost('address1'),
+                    $this->request->getPost('address2'),
+                    $this->request->getPost('address3'),
+                    $this->request->getPost('city'),
+                    $this->request->getPost('country'),
+                    $this->request->getPost('eircode'),
+                    $this->request->getPost('date'),
+                    $this->request->getPost('gender'),
+                    $this->request->getPost('title'),
+                    $this->request->getPost('jobTitle'),
+                    $hashedPassword
+                );
+
+                if ($staff) {
+                    // Registration successful, set session data
+
+                    // Redirect to the staffs dashboard or wherever needed
+                    $this->viewStaffsDashboard();
+                } else {
+                    // Registration failed, redirect back to the registration form with an error message
+                    $data['error'] = 'Registration failed. Please try again.';
+                    echo view('Dashboard/addNewStaff', $data);
+                }
+            }
+        }
+        
+    }
+
     public function getMemberAddress($memberID){
         if (!empty($memberID)) { 
 
@@ -142,7 +227,7 @@ public function memberlogin() {
             //Return the view file with the data
             echo view('Dashboard/memberAddressAdmin', $data);
         }
-        echo view('dashboard');
+        $this->dashboard();
 
     }
 
@@ -199,7 +284,10 @@ public function memberlogin() {
     echo view('dashboard/updateProductDashboard', $data);
 }
 
-	
+
+public function viewAddProduct(){
+
+}
 
  public function addProduct()
 {
@@ -241,7 +329,7 @@ public function memberlogin() {
                 
                 // Path where the images will be stored, Something like this
                 //http://localhost/CI4-McFaddan/public/uploads/ResourceImageProduct
-                $imagePath = 'C:\xampp\htdocs\CI4-McFaddan\public\uploads\ResourceImageProduct';
+                $imagePath = 'C:\xampp\htdocs\GroupProjectISD3\CI4-McFaddan\public\uploads\ResourceImageProduct';
 
                 // Create the uploads folder if it doesnt exist
                 if (!is_dir(FCPATH . 'uploads')) {
@@ -276,18 +364,22 @@ public function memberlogin() {
                 return view('dashboard/addProductDashboard', $data);
             }
         } 
+    }else{
+        echo view('dashboard/addProductDashboard', $data);
     }
-    echo view('dashboard/addProductDashboard', $data);
+    
+    
+
 }
 
 
 
 public function updateProduct($id)
 {
+    
     $productModel = new AdminDashboardModel();
         $data['product'] = $productModel->findProduct($id);
     $data['categories'] = $productModel->findAllCategories();
-
     //Load the validation service
     $validation = \Config\Services::validation();
 
@@ -320,7 +412,7 @@ public function updateProduct($id)
                 
                 // Path where the images will be stored, Something like this
                 //http://localhost/CI4-McFaddan/public/uploads/ResourceImageProduct
-                $imagePath = 'C:\xampp\htdocs\CI4-McFaddan\public\uploads\ResourceImageProduct';
+                $imagePath = 'C:\xampp\htdocs\GroupProjectISD3\CI4-McFaddan\public\uploads\ResourceImageProduct';
 
                 // Create the uploads folder if it doesnt exist
                 if (!is_dir(FCPATH . 'uploads')) {
@@ -355,8 +447,11 @@ public function updateProduct($id)
                 return view('dashboard/updateProductDashboard', $data);
             }
         } 
+    }else{
+        echo view('dashboard/updateProductDashboard', $data);
     }
-    echo view('dashboard/updateProductDashboard', $data);
+
+    
 }
 
 
@@ -377,6 +472,8 @@ public function updateProduct($id)
         return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('error', 'Failed to delete product');
     }
 }
+
+
 
 
 
@@ -429,7 +526,7 @@ public function insertCategory(){
                 
                 // Path where the images will be stored, Something like this
                 //http://localhost/CI4-McFaddan/public/uploads/ResourceImage
-                $imagePath = 'C:\xampp\htdocs\CI4-McFaddan\public\uploads\ResourceImage';
+                $imagePath = 'C:\xampp\htdocs\GroupProjectISD3\CI4-McFaddan\public\uploads\ResourceImage';
 
                 // Create the uploads folder if it doesnt exist
                 if (!is_dir(FCPATH . 'uploads')) {
@@ -524,7 +621,7 @@ public function updateCategory($id)
                 
                 // Path where the images will be stored, Something like this
                 //http://localhost/CI4-McFaddan/public/uploads/ResourceImage
-                $imagePath = 'C:\xampp\htdocs\CI4-McFaddan\public\uploads\ResourceImage';
+                $imagePath = 'C:\xampp\htdocs\GroupProjectISD3\CI4-McFaddan\public\uploads\ResourceImage';
 
                 // Create the uploads folder if it doesnt exist
                 if (!is_dir(FCPATH . 'uploads')) {
@@ -566,9 +663,11 @@ public function updateCategory($id)
                 return view('dashboard/updateCategoryDashboard', $data);
             }
         }
+    }else{
+        echo view('dashboard/updateCategoryDashboard', $data);
     }
 
-    echo view('dashboard/updateCategoryDashboard', $data);
+    
 }
 
 

@@ -76,7 +76,7 @@ class AdminDashboardModel extends Model
 
     public function updateCategory($categoryID, $categoryName, $imageCat)
     {
-        $query = $this->db->query('CALL UpdateCategory(?, ?, ?)', [$categoryID, $categoryName, $imageCat]);
+        $query = $this->query('CALL UpdateCategory(?, ?, ?)', [$categoryID, $categoryName, $imageCat]);
         //return $query;
     }
 
@@ -89,7 +89,7 @@ class AdminDashboardModel extends Model
 
     public function updateProduct($productID, $productName,$description,$price,$image,$stockQuantity, $color, $categoryID)
     {
-        $query = $this->db->query('CALL UpdateProduct(?, ?, ?, ?, ?, ?, ?, ?)', [$productID,$productName,$description,$price, $image, $stockQuantity, $color, $categoryID]);
+        $query = $this->query('CALL UpdateProduct(?, ?, ?, ?, ?, ?, ?, ?)', [$productID,$productName,$description,$price, $image, $stockQuantity, $color, $categoryID]);
         //return $query;
     }
 

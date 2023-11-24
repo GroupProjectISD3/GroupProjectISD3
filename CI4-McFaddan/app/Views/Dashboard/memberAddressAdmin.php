@@ -115,7 +115,7 @@
                     </tbody>
                 </table>
                 
-                <a href="<?= base_url('dashboard') ?>" class="btn btn-primary">Go Back </a>
+                <a href="<?= base_url('viewMembersDashboard') ?>" class="btn btn-primary">Go Back </a>
 
             </div>
             

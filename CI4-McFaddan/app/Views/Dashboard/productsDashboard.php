@@ -44,6 +44,7 @@ $controller_base = $base."index.php/";
        <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
+        <!-- Sidebar -->
         <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar bg-dark">
             <div class="position-sticky d-flex flex-column align-items-center justify-content-center vh-100">
                 <ul class="nav flex-column w-100">
@@ -53,36 +54,37 @@ $controller_base = $base."index.php/";
                             Dashboard
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
-                            <i class="fas fa-users me-2"></i>
-                            Administrators
+                     <li class="nav-item">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
+                            <!--fas fa-shopping-cart me-2-->
+                            <i class="fas fa-box-open me-2"></i>
+                            Products
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewStaffsDashboard') ?>">
                             <i class="fas fa-users-cog me-2"></i>
                             Staff
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
                             <i class="fas fa-user-friends me-2"></i>
-                            Customers
+                            Members
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
+                        <a class="nav-link text-light mb-2" href="<?= base_url('viewSalesDashboard') ?>">
                             <i class="fas fa-chart-line me-2"></i>
                             Sales
                         </a>
                     </li>
                 </ul>
-                
+
                 <ul class="nav flex-column w-100">
                     <!-- Other menu items -->
                     <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('logout') ?>">
+        <a class="nav-link text-light mb-2" href="<?= base_url('AdminDashboardController/logout') ?>">
                             <i class="fas fa-sign-out-alt me-2"></i>
                             Logout
                         </a>
@@ -90,7 +92,6 @@ $controller_base = $base."index.php/";
                 </ul>
             </div>
         </nav>
-
         <!-- Main content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5">
             <div class="container">

@@ -119,6 +119,110 @@ public $productInsertValidation = [
 ];
 
 
+//Validation for staff registration
+public $staffInsertValidation = [
+    'firstname' => [
+        'label' => 'Staff First Name',
+        'rules' => 'required|max_length[255]',
+        'errors' => [
+            'required' => '{field} is required',
+            'max_length' => '{field} must be less than {param} characters long.'
+        ] 
+
+    ],
+
+    'lastname' => [
+        'label' => 'Staff Last Name',
+        'rules' => 'required|max_length[255]',
+        'errors' => [
+            'required' => '{field} is required',
+            'max_length' => '{field} must be less than {param} characters long.'
+        ] 
+
+    ],
+
+    'email' => [
+        'label' => 'Staff Email',
+        'rules' => 'required|max_length[255]|valid_email|is_unique[staff.email]',
+        'errors' => [
+            'required' => '{field} is required!',
+            'max_length' => '{field} must be less than {param} characters long.',
+            'is_unique' => 'This {field} already exists.',
+            'valid_email' => '{field} must be a valid email address.'
+        ]
+    ],
+
+    'phone' => [
+        'label' => 'Staff Phone Number',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'address1' => [
+        'label' => 'Staff Address 1',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'city' => [
+        'label' => 'Staff City',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    //Valid Eircode = Routing Key (first three characters) followed by a space and then the Unique Identifier (last four characters)
+
+    'eircode' => [
+    'label' => 'Staff Eircode',
+    'rules' => 'required|regex_match[/^[A-Z0-9]{3} [A-Z0-9]{4}$/]',
+    'errors' => [
+            'required' => '{field} is required!',
+            'regex_match' => '{field} is not a valid a valid eircode'
+        ]
+    ],
+
+    'address1' => [
+        'label' => 'Staff Address 1',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'date' => [
+        'label' => 'Hire Date',
+        'rules' => 'required|valid_date[Y-m-d]',
+        'errors' => [
+            'required' => '{field} is required!',
+            'valid_date' => '{field} is not in the correct format!'
+        ]
+    ],
+
+    'jobTitle' => [
+        'label' => 'Staff Job Title',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'password' => [
+        'label' => 'Password',
+        'rules' => 'required|min_length[6]',
+        'errors' => [
+            'required' => '{field} is required!',
+            'min_length' => '{field} must be greater than {param} characters.'
+        ]
+    ]
+
+];
+
 
 
     // Validation for member Insert.
