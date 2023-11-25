@@ -1,3 +1,6 @@
+<?php if($isLoggedIn && ($userRole == 'admin' || $userRole == 'staff')): ?>
+    
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,6 +115,11 @@
         </nav>
 
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5 container">
+            <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                <!-- Display user-specific content, like user email -->
+                <p>Super Admin</p>
+                <p>Welcome, <?= $first_name ?>!</p>
+            <?php endif; ?>
         <div class="row">
             <!-- User Stats Card -->
             <div class="col-md-4">
@@ -174,3 +182,11 @@
 
 
 </html>
+
+<?php else: ?>
+<!-- Redirect to the member index page -->
+    <script type="text/javascript">
+        window.location.href = "<?= base_url('MemberController/index') ?>";
+    </script>
+    
+<?php endif; ?>

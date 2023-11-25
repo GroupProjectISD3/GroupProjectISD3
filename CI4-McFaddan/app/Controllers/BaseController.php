@@ -97,7 +97,7 @@ abstract class BaseController extends Controller
             'first_name' => $member->firstName,
             'last_name' => $member->lastName,
             'email'     => $member->email,
-            'role'      => 'customer',
+            'role'      => 'member',
         ]);
     }
 
@@ -117,13 +117,15 @@ abstract class BaseController extends Controller
 
     
 
-    protected function setMemberSessionDataLogin($userId, $email, $role)
+    protected function setMemberSessionDataLogin($user)
     {
         $memberSession = $this->memberSession();
         $memberSession->set([
-            'user_id' => $userId,
-            'email'     => $email,
-            'role'      => $role,
+            'user_id' => $user->id,
+            'first_name' => $user->first_name,
+            'last_name' => $user->last_name,
+            'email' => $user->p_email,
+            'role' => $user->role,
         ]);
     }
 
@@ -132,8 +134,10 @@ abstract class BaseController extends Controller
         $memberSession = $this->memberSession();
         return [
             'user_id' => $memberSession->get('user_id'),
-            'email'     => $memberSession->get('email'),
-            'role'      => $memberSession->get('role'),
+            'first_name' => $memberSession->get('first_name'),
+            'last_name' => $memberSession->get('last_name'),
+            'email' => $memberSession->get('email'),
+            'role' => $memberSession->get('role'),
         ];
     }
 

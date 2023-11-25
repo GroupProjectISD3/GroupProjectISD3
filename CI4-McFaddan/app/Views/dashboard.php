@@ -1,3 +1,9 @@
+<?php if($isLoggedIn && ($userRole == 'admin' || $userRole == 'staff')): ?>
+    
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,39 +55,63 @@ $controller_base = $base."dashboard.php/";
         <!-- Sidebar -->
         <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar bg-dark">
             <div class="position-sticky d-flex flex-column align-items-center justify-content-center vh-100">
-                <ul class="nav flex-column w-100">
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
-                            <i class="fas fa-tachometer-alt me-2"></i>
-                            Dashboard
-                        </a>
-                    </li>
-					 <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
-                            <!--fas fa-shopping-cart me-2-->
-                            <i class="fas fa-box-open me-2"></i>
-                            Products
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('viewStaffsDashboard') ?>">
-                            <i class="fas fa-users-cog me-2"></i>
-                            Staff
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
-                            <i class="fas fa-user-friends me-2"></i>
-                            Members
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('viewSalesDashboard') ?>">
-                            <i class="fas fa-chart-line me-2"></i>
-                            Sales
-                        </a>
-                    </li>
-                </ul>
+                <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                    <ul class="nav flex-column w-100">
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                                <i class="fas fa-tachometer-alt me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
+                                <!--fas fa-shopping-cart me-2-->
+                                <i class="fas fa-box-open me-2"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewStaffsDashboard') ?>">
+                                <i class="fas fa-users-cog me-2"></i>
+                                Staff
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
+                                <i class="fas fa-user-friends me-2"></i>
+                                Members
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewSalesDashboard') ?>">
+                                <i class="fas fa-chart-line me-2"></i>
+                                Sales
+                            </a>
+                        </li>
+                    </ul>
+                <?php elseif($isLoggedIn && $userRole == 'staff'): ?>
+                    <ul class="nav flex-column w-100">
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                                <i class="fas fa-tachometer-alt me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
+                                <!--fas fa-shopping-cart me-2-->
+                                <i class="fas fa-box-open me-2"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
+                                <i class="fas fa-user-friends me-2"></i>
+                                Members
+                            </a>
+                        </li>
+                    </ul>
+                <?php endif; ?>
 
                 <ul class="nav flex-column w-100">
                     <!-- Other menu items -->
@@ -100,65 +130,99 @@ $controller_base = $base."dashboard.php/";
             <div class="pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
             </div>
+            <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                <!-- Display user-specific content, like user email -->
+                <p>Super Admin</p>
+                <p>Welcome, <?= $first_name ?>!</p>
+                <div class="row">
+                    <!-- Staff Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Staff</h2>
+                               <a href="<?= base_url('viewStaffsDashboard') ?>"  class="btn btn-primary">Manage Staff</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <?php if ($isLoggedIn): ?>
-                            <!-- Display user-specific content, like user email -->
-                            <p>Welcome, <?php echo $email; ?>!</p>
-                        <?php endif; ?>
+                    <!-- Customers Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Members</h2>
+                                <a href="<?= base_url('viewMembersDashboard') ?>"  class="btn btn-primary">Manage Members</a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="row">
-            
+                    <!-- Categories Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Categories</h2>
+                                <a href="<?= base_url('viewCategoryDashboard') ?>"  class="btn btn-primary">Manage Categories</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Staff Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Staff</h2>
-                           <a href="<?= base_url('viewStaffsDashboard') ?>"  class="btn btn-primary">Manage Staff</a>
+                    <!-- Products Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Products</h2>
+                                <a href="<?= base_url('viewProductsDashboard') ?>" class="btn btn-primary">Manage Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sales Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Sales</h2>
+                                <a href="<?= base_url('viewSalesDashboard') ?>" class="btn btn-primary">View Sales</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Customers Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Members</h2>
-                            <a href="<?= base_url('viewMembersDashboard') ?>"  class="btn btn-primary">Manage Members</a>
-                        </div>
-                    </div>
-                </div>
+            <?php elseif($isLoggedIn && $userRole == 'staff'): ?>
+                <!-- Display content for staff -->
+                <p>Welcome, staff member <?= $first_name ?>!</p>
+                <div class="row">
+                    
 
-                <!-- Categories Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Categories</h2>
-                            <a href="<?= base_url('viewCategoryDashboard') ?>"  class="btn btn-primary">Manage Categories</a>
+                    <!-- Customers Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Members</h2>
+                                <a href="<?= base_url('viewMembersDashboard') ?>"  class="btn btn-primary">Manage Members</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Products Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Products</h2>
-                            <a href="<?= base_url('viewProductsDashboard') ?>" class="btn btn-primary">Manage Products</a>
+                    <!-- Categories Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Categories</h2>
+                                <a href="<?= base_url('viewCategoryDashboard') ?>"  class="btn btn-primary">Manage Categories</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Sales Section -->
-                <div class="col-lg-4">
-                    <div class="card mb-4 d-flex flex-column">
-                        <div class="card-body">
-                            <h2 class="card-title">Sales</h2>
-                            <a href="<?= base_url('viewSalesDashboard') ?>" class="btn btn-primary">View Sales</a>
+                    <!-- Products Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Products</h2>
+                                <a href="<?= base_url('viewProductsDashboard') ?>" class="btn btn-primary">Manage Products</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </main>
     </div>
 </div>
@@ -175,3 +239,10 @@ $controller_base = $base."dashboard.php/";
 
 
 ?>
+<?php else: ?>
+<!-- Redirect to the member index page -->
+    <script type="text/javascript">
+        window.location.href = "<?= base_url('MemberController/index') ?>";
+    </script>
+    
+<?php endif; ?>

@@ -42,7 +42,7 @@ $controller_base = $base."checkout.php/";
 
 ?>
 
-   <?php if ($isLoggedIn && $userRole == 'customer'): ?>
+   <?php if ($isLoggedIn && $userRole == 'member'): ?>
     <!-- HTML content for logged in members -->
      <!-- Navbar starts -->
  <div class="container-fluid mb-5">

@@ -1,3 +1,5 @@
+<?php if($isLoggedIn && ($userRole == 'admin' || $userRole == 'staff')): ?>
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,6 +87,11 @@
         <!-- Main content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5">
             <div class="container">
+                <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                <!-- Display user-specific content, like user email -->
+                <p>Super Admin</p>
+                <p>Welcome, <?= $first_name ?>!</p>
+            <?php endif; ?>
 
                 <h2 class="mb-4">McFaddan Staffs</h2>
                 
@@ -104,8 +111,8 @@
                     <tbody>
                         <?php if (!empty($staffs)): foreach ($staffs as $staff): ?>
                         <tr>
-                            <td><?= $staff['firstname'] ?></td>
-                            <td><?= $staff['lastname'] ?></td>
+                            <td><?= $staff['firstName'] ?></td>
+                            <td><?= $staff['lastName'] ?></td>
                             <td><?= $staff['email'] ?></td>
                             <td><?= $staff['phone'] ?></td>
                             <td><?= $staff['gender'] ?></td>
@@ -144,3 +151,11 @@
 
 
 </html>
+
+<?php else: ?>
+<!-- Redirect to the member index page -->
+    <script type="text/javascript">
+        window.location.href = "<?= base_url('MemberController/index') ?>";
+    </script>
+    
+<?php endif; ?>

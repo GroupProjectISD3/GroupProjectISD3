@@ -21,8 +21,8 @@ class LoginController extends BaseController{
         $this->db = \Config\Database::connect();
 
 
-        // Enable logging in your constructor or initialization method
-$this->logger = \Config\Services::logger();
+        // Error logging enabled
+        $this->logger = \Config\Services::logger();
 
 
 
@@ -62,19 +62,19 @@ $this->logger = \Config\Services::logger();
 		        $user = $this->MemberModel->authenticateUser($emailOrUsername, $hashedPassword);
 
 		        // Log user data
-            $this->logger->info('User Email: ' . print_r($emailOrUsername, true));
+            //$this->logger->info('User Email: ' . print_r($emailOrUsername, true));
             // Log user data
-            $this->logger->info('User Password: ' . print_r($hashedPassword, true));
+            //$this->logger->info('User Password: ' . print_r($hashedPassword, true));
 
 		        // Log user data
-            $this->logger->info('User Data: ' . print_r($user, true));
+            //$this->logger->info('User Data: ' . print_r($user, true));
 
 		        if ($user) {
 		            // If the user is authenticated, set session data
 		            $this->setSessionData($user);
 
 		            // Redirect to the appropriate dashboard based on the user's role
-		            return redirect()->to($this->getDashboardURL($user['role']));
+		            return redirect()->to($this->getDashboardURL($user->role));
 		        } else {
 		            // If authentication fails, set flash data and redirect
 					return redirect()->to('memberlogin')->with('error', 'Login failed. Please try again.');
@@ -84,6 +84,7 @@ $this->logger = \Config\Services::logger();
     	}
     }
 
+    
     private function setSessionData($user)
     {
         // This private function sets session data after successful authentication.
@@ -92,16 +93,13 @@ $this->logger = \Config\Services::logger();
 
         // Set common session data for all users
         $session->set([
-            'user_id' => $user['id'],
-            'email' => $user['p_email'],
-            'role' => $user['role'],
+            'user_id' => $user->id,
+            'first_name' => $user->first_name,
+            'last_name' => $user->last_name,
+            'email' => $user->p_email,
+            'role' => $user->role,
         ]);
 
-        // Add role-specific data if needed
-        if ($user['role'] === 'staff') {
-            $session->set(['staff_id' => $user['staffID']]);
-        }
-        // Add other role-specific data if needed
     }
 
     private function getDashboardURL($role)
@@ -116,7 +114,7 @@ $this->logger = \Config\Services::logger();
             case 'member':
                 return 'MemberController/index';
             default:
-                return 'MemberController/error';
+                return 'MemberController/errorMemberLogin';
         }
     }
 

@@ -23,7 +23,7 @@ class MemberModel extends Model
     // Fetch the results (including the LAST_INSERT_ID)
     $result = $query->getResult();
 
-    log_message('debug', 'registerMember result: ' . print_r($result, true));
+    //log_message('debug', 'registerMember result: ' . print_r($result, true));
 
     // Check if the operation was successful
     if (count($result) > 0) {
@@ -36,7 +36,7 @@ class MemberModel extends Model
   }
 
 
-  public function authenticateMember($email, $password)
+  /*public function authenticateMember($email, $password)
   {
     // Execute the stored procedure
     $query = $this->query("CALL authenticate_member(?, ?)",
@@ -61,7 +61,7 @@ class MemberModel extends Model
       // The stored procedure did not return data, indicating an error
       return false;
     }
-  }
+  }*/
 
 
   public function authenticateUser($emailOrUsername, $password)
@@ -69,16 +69,19 @@ class MemberModel extends Model
     // Call the stored procedure to authenticate user
     $query = $this->query("CALL authenticate_user(?, ?)", [$emailOrUsername, $password]);
 
-    // Get the result
-    $result = $query->getRowArray();
+    // Fetch the results (including the id, firstName, lastName, etc.)
+    $result = $query->getResult();
 
-    // Check if the result is empty
-    if (empty($result)) {
+    // Check if the operation was successful
+    if (count($result) > 0) {
+      // The stored procedure returned data, indicating success
+      return $result[0];
+    } else {
+      // The stored procedure did not return data, indicating an error
       return null; // Return null if no user is found
-    }
-
-    return $result;
+    } 
   }
+  
 
 }
 

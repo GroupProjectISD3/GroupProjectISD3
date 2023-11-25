@@ -35,38 +35,63 @@
         <!-- Sidebar -->
         <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar bg-dark">
             <div class="position-sticky d-flex flex-column align-items-center justify-content-center vh-100">
-                <ul class="nav flex-column w-100">
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
-                            <i class="fas fa-tachometer-alt me-2"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
-                            <i class="fas fa-users me-2"></i>
-                            Administrators
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
-                            <i class="fas fa-users-cog me-2"></i>
-                            Staff
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
-                            <i class="fas fa-user-friends me-2"></i>
-                            Customers
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light mb-2" href="#">
-                            <i class="fas fa-chart-line me-2"></i>
-                            Sales
-                        </a>
-                    </li>
-                </ul>
+                <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                    <ul class="nav flex-column w-100">
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                                <i class="fas fa-tachometer-alt me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
+                                <!--fas fa-shopping-cart me-2-->
+                                <i class="fas fa-box-open me-2"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewStaffsDashboard') ?>">
+                                <i class="fas fa-users-cog me-2"></i>
+                                Staff
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
+                                <i class="fas fa-user-friends me-2"></i>
+                                Members
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewSalesDashboard') ?>">
+                                <i class="fas fa-chart-line me-2"></i>
+                                Sales
+                            </a>
+                        </li>
+                    </ul>
+                <?php elseif($isLoggedIn && $userRole == 'staff'): ?>
+                    <ul class="nav flex-column w-100">
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('dashboard') ?>">
+                                <i class="fas fa-tachometer-alt me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewProductsDashboard') ?>">
+                                <!--fas fa-shopping-cart me-2-->
+                                <i class="fas fa-box-open me-2"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light mb-2" href="<?= base_url('viewMembersDashboard') ?>">
+                                <i class="fas fa-user-friends me-2"></i>
+                                Members
+                            </a>
+                        </li>
+                    </ul>
+                <?php endif; ?>
                 
                 <ul class="nav flex-column w-100">
                     <!-- Other menu items -->
@@ -83,6 +108,14 @@
         <!-- Main content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5">
             <div class="container">
+                <?php if($isLoggedIn && $userRole == 'admin'): ?>
+                    <!-- Display user-specific content, like user email -->
+                    <p>Super Admin</p>
+                    <p>Welcome, <?= $first_name ?>!</p>
+                <?php elseif($isLoggedIn && $userRole == 'staff'): ?>
+                    <!-- Display content for staff -->
+                    <p>Welcome, staff member <?= $first_name ?>!</p>
+                <?php endif; ?>
 
                 <h3 class="mb-4">Member Address</h3>
                 <table class="table">

@@ -37,6 +37,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -51,6 +52,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the index page
         return view('index', $data);
@@ -69,6 +72,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -83,6 +87,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the faq page
         return view('faq', $data);
@@ -98,6 +104,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -112,6 +119,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the contact page
         return view('contact', $data);
@@ -129,6 +138,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -143,6 +153,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
 
         // Load the view for the wishlist page
@@ -161,6 +173,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -175,6 +188,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
 
         // Load the view for the wishlist page
@@ -188,6 +203,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -202,6 +218,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the contact page
         return view('cart', $data);
@@ -220,6 +238,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -234,6 +253,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
 
         // Load the view for the checkout page
@@ -249,6 +270,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -263,6 +285,8 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the products page
         return view('products', $data);
@@ -309,7 +333,7 @@ class MemberController extends BaseController{
                         'first_name' =>$member->firstName,
                         'last_name' => $member->lastName,
                         'email'     => $this->request->getPost('email'),
-                        'role'      => 'customer', // Assuming 'customer' is the default role
+                        'role'      => 'member',
                     ]);
 
                     // Redirect to the member dashboard or wherever needed

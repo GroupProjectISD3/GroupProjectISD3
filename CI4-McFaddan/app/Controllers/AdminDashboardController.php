@@ -89,7 +89,29 @@ public function memberlogin() {
     }*/
 
     public function categoryDashboard() {
-        echo view('Dashboard/categoryDashboard');
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        return view('Dashboard/categoryDashboard', $data);
         
     }
 
@@ -98,14 +120,27 @@ public function memberlogin() {
 
 
 	public function dashboard() {
-       // Check if the user is logged in
+        // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionDataLogin()['email'] : '';
-
-        // Pass $isLoggedIn to the view
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
 
         // Load the view for the other page
         return view('dashboard', $data);
@@ -116,50 +151,165 @@ public function memberlogin() {
 
 
 	public function viewProductsDashboard()
-{
-    $productModel = new AdminDashboardModel();
-    $data['products'] = $productModel->findAll();
+    {
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
-    // Loop through each product and add the 'id' key
-    foreach ($data['products'] as &$product) {
-        $product['id'] = $product['productID'];
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $productModel = new AdminDashboardModel();
+        $data['products'] = $productModel->findAll();
+
+        // Loop through each product and add the 'id' key
+        foreach ($data['products'] as &$product) {
+            $product['id'] = $product['productID'];
+        }
+
+        return view('dashboard/productsDashboard', $data);
     }
-
-    echo view('dashboard/productsDashboard', $data);
-}
 
 
     //Customers details
     public function viewMembersDashboard(){
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
         $members = [ 'members' => $this->adminMemberInfo->paginate(15), //no. of records to display
         'pager' => $this->adminMemberInfo->pager ]; //Pager class info
+
+        // Merge $data and $members arrays
+        $data = array_merge($data, $members);
         
-        echo view('Dashboard/viewAllMembersDashboard', $members); //Display view with records and pager info
+        return view('Dashboard/viewAllMembersDashboard', $data); //Display view with records and pager info
     }
 
     //Staff details
     public function viewStaffsDashboard(){
-        $staffs = [ 'staffs' => $this->staffMemberInfo->paginate(15), //no. of records to display
-        'pager' => $this->staffMemberInfo->pager ]; //Pager class info
-        
-        echo view('Dashboard/viewAllStaffsDashboard', $staffs); //Display view with records and pager info
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
+
+            if (!$isLoggedIn && $this->getUserRole() == 'member') {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/index');
+            }
+
+            // Get session data
+            $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+            // Pass $isLoggedIn and $userRole to the view
+            $data['isLoggedIn'] = $isLoggedIn;
+            $data['userRole'] = $userRole;
+
+            // Pass session data to the view
+            $data['email'] = $sessionData['email'] ?? '';
+            $data['first_name'] = $sessionData['first_name'] ?? '';
+            $data['last_name'] = $sessionData['last_name'] ?? '';
+            $data['user_id'] = $sessionData['user_id'] ?? '';
+
+
+            $staffs = [ 'staffs' => $this->staffMemberInfo->paginate(15), //no. of records to display
+            'pager' => $this->staffMemberInfo->pager ]; //Pager class info
+
+            // Merge $data and $staffs arrays
+            $data = array_merge($data, $staffs);
+            
+            echo view('Dashboard/viewAllStaffsDashboard', $data); //Display view with records and pager info
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+        }
     }
     
 
     //View AddNewStaff
     public function viewAddNewStaff(){
-        echo view('Dashboard/addNewStaff');
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
+
+            if (!$isLoggedIn && $this->getUserRole() == 'member') {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/index');
+            }
+
+            // Get session data
+            $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+            // Pass $isLoggedIn and $userRole to the view
+            $data['isLoggedIn'] = $isLoggedIn;
+            $data['userRole'] = $userRole;
+
+            // Pass session data to the view
+            $data['email'] = $sessionData['email'] ?? '';
+            $data['first_name'] = $sessionData['first_name'] ?? '';
+            $data['last_name'] = $sessionData['last_name'] ?? '';
+            $data['user_id'] = $sessionData['user_id'] ?? '';
+
+            // Load the view for the other page
+            return view('Dashboard/addNewStaff', $data);
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+        }
     }
 
 
     //Delete Staff
     public function deleteStaff($id){
-        $result = $this->staffMemberInfo->deleteStaff($id);
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            $result = $this->staffMemberInfo->deleteStaff($id);
 
-        if ($result) {
-            return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
-        } else {
-            return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
+            if ($result) {
+                return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
+            } else {
+                return redirect()->to(base_url('AdminDashboardController/viewStaffsDashboard'));
+            }
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+
         }
     }
 
@@ -167,122 +317,275 @@ public function memberlogin() {
 
     //Add Staffs
     public function addNewStaff(){
-        //Load the validation service
-        $validation = \Config\Services::validation();
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
 
-                //if the addNewStaff button is clicked
-        if(isset($_POST['addNewStaff'])){
-            //If validation does not pass
-            if (!$this->validate('staffInsertValidation')) {
-                // Get validator details
-                $data['validation'] = $this->validator;
+            if (!$isLoggedIn) {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/index');
+            }
 
-                //Render view with validator errors
-                echo view('Dashboard/addNewStaff', $data);
-            }else{
-                // Hash the password with CodeIgniter's password_hash function
-                $hashedPassword = hash('sha256', $this->request->getPost('password'));
+            // Get session data
+            $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+            // Pass $isLoggedIn and $userRole to the view
+            $data['isLoggedIn'] = $isLoggedIn;
+            $data['userRole'] = $userRole;
 
+            // Pass session data to the view
+            $data['email'] = $sessionData['email'] ?? '';
+            $data['first_name'] = $sessionData['first_name'] ?? '';
+            $data['last_name'] = $sessionData['last_name'] ?? '';
+            $data['user_id'] = $sessionData['user_id'] ?? '';
 
-                // Register Staff
-                $staff = $this->staffMemberInfo->registerStaff(
-                    $this->request->getPost('firstname'),
-                    $this->request->getPost('lastname'),
-                    $this->request->getPost('email'),
-                    $this->request->getPost('phone'),
-                    $this->request->getPost('address1'),
-                    $this->request->getPost('address2'),
-                    $this->request->getPost('address3'),
-                    $this->request->getPost('city'),
-                    $this->request->getPost('country'),
-                    $this->request->getPost('eircode'),
-                    $this->request->getPost('date'),
-                    $this->request->getPost('gender'),
-                    $this->request->getPost('title'),
-                    $this->request->getPost('jobTitle'),
-                    $hashedPassword
-                );
+            //Load the validation service
+            $validation = \Config\Services::validation();
 
-                if ($staff) {
-                    // Registration successful, set session data
+                    //if the addNewStaff button is clicked
+            if(isset($_POST['addNewStaff'])){
+                //If validation does not pass
+                if (!$this->validate('staffInsertValidation')) {
+                    // Get validator details
+                    $data['validation'] = $this->validator;
 
-                    // Redirect to the staffs dashboard or wherever needed
-                    $this->viewStaffsDashboard();
-                } else {
-                    // Registration failed, redirect back to the registration form with an error message
-                    $data['error'] = 'Registration failed. Please try again.';
+                    //Render view with validator errors
                     echo view('Dashboard/addNewStaff', $data);
+                }else{
+                    // Hash the password with CodeIgniter's password_hash function
+                    $hashedPassword = hash('sha256', $this->request->getPost('password'));
+
+
+                    // Register Staff
+                    $staff = $this->staffMemberInfo->registerStaff(
+                        $this->request->getPost('firstname'),
+                        $this->request->getPost('lastname'),
+                        $this->request->getPost('email'),
+                        $this->request->getPost('phone'),
+                        $this->request->getPost('address1'),
+                        $this->request->getPost('address2'),
+                        $this->request->getPost('address3'),
+                        $this->request->getPost('city'),
+                        $this->request->getPost('country'),
+                        $this->request->getPost('eircode'),
+                        $this->request->getPost('date'),
+                        $this->request->getPost('gender'),
+                        $this->request->getPost('title'),
+                        $this->request->getPost('jobTitle'),
+                        $hashedPassword
+                    );
+
+                    if ($staff) {
+                        // Registration successful, set session data
+
+                        // Redirect to the staffs dashboard or wherever needed
+                        $this->viewStaffsDashboard();
+                    } else {
+                        // Registration failed, redirect back to the registration form with an error message
+                        $data['error'] = 'Registration failed. Please try again.';
+                        return view('Dashboard/addNewStaff', $data);
+                    }
                 }
             }
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+
         }
         
     }
 
     public function getMemberAddress($memberID){
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
         if (!empty($memberID)) { 
 
             // Get customer details using $customerNumber
             $data['addresses'] = $this->adminMemberInfo->getCustomer($memberID);
 
             //Return the view file with the data
-            echo view('Dashboard/memberAddressAdmin', $data);
+            return view('Dashboard/memberAddressAdmin', $data);
         }
         $this->dashboard();
 
     }
 
     public function viewSalesDashboard(){
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
 
-        $memberCount = $this->adminMemberInfo->countMembers();
-        $staffCount = $this->adminMemberInfo->countStaffs();
-        $totalSuccessfulPayments = $this->adminMemberInfo->calculateTotalSuccessfulPayments();
-        $data['categoryData'] = $this->adminMemberInfo->getCategoryWithMostPayments();
+            if (!$isLoggedIn) {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/index');
+            }
+
+            // Get session data
+            $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+            // Pass $isLoggedIn and $userRole to the view
+            $data['isLoggedIn'] = $isLoggedIn;
+            $data['userRole'] = $userRole;
+
+            // Pass session data to the view
+            $data['email'] = $sessionData['email'] ?? '';
+            $data['first_name'] = $sessionData['first_name'] ?? '';
+            $data['last_name'] = $sessionData['last_name'] ?? '';
+            $data['user_id'] = $sessionData['user_id'] ?? '';
+
+            $memberCount = $this->adminMemberInfo->countMembers();
+            $staffCount = $this->adminMemberInfo->countStaffs();
+            $totalSuccessfulPayments = $this->adminMemberInfo->calculateTotalSuccessfulPayments();
+            $data['categoryData'] = $this->adminMemberInfo->getCategoryWithMostPayments();
 
 
-        // Add new values to the data array
-        $data['memberCount'] = $memberCount;
-        $data['staffCount'] = $staffCount;
-        $data['totalSuccessfulPayments'] = $totalSuccessfulPayments;
-        //Display information about all categories
-        echo view('Dashboard/viewSalesDashboard', $data);
+            // Add new values to the data array
+            $data['memberCount'] = $memberCount;
+            $data['staffCount'] = $staffCount;
+            $data['totalSuccessfulPayments'] = $totalSuccessfulPayments;
+            //Display information about all categories
+            return view('Dashboard/viewSalesDashboard', $data);
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+
+        }
     }
 
 	// Same as view sales dashboard- can delete later 
     public function showChart()
     {
-        $data['categoryData'] = $this->yourModel->getCategoryWithMostPayments();
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn() && $this->getUserRole() == 'admin') {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
 
-        //Display information about all categories
-        echo view('Dashboard/viewSalesDashboard', $data);
+            if (!$isLoggedIn) {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/index');
+            }
+
+            // Get session data
+            $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+            // Pass $isLoggedIn and $userRole to the view
+            $data['isLoggedIn'] = $isLoggedIn;
+            $data['userRole'] = $userRole;
+
+            // Pass session data to the view
+            $data['email'] = $sessionData['email'] ?? '';
+            $data['first_name'] = $sessionData['first_name'] ?? '';
+            $data['last_name'] = $sessionData['last_name'] ?? '';
+            $data['user_id'] = $sessionData['user_id'] ?? '';
+
+            $data['categoryData'] = $this->yourModel->getCategoryWithMostPayments();
+
+            //Display information about all categories
+            return view('Dashboard/viewSalesDashboard', $data);
+        }else{
+            //User is not an admin, redirect to dashboard
+            return redirect()->to(base_url('AdminDashboardController/dashboard'));
+
+        }
     }
 
 	
 	public function viewAddProductDashboard()
     {
         $productModel = new AdminDashboardModel();
-        $data['products'] = $productModel->findAll();
-    $data['categories'] = $productModel->findAllCategories(); // Corrected line
 
-        echo view('dashboard/addProductDashboard', $data);
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $data['products'] = $productModel->findAll();
+        $data['categories'] = $productModel->findAllCategories(); // Corrected line
+
+        return view('dashboard/addProductDashboard', $data);
     }
 	
 	
 	
 	public function viewUpdateProduct($id)
-{
-    $productModel = new AdminDashboardModel();
-    
-    // Fetch the product data based on the given ID
-    $data['product'] = $productModel->find($id);
+    {
+        $productModel = new AdminDashboardModel();
 
-    // Check if the product exists
-    if (!$data['product']) {
-        // Product not found, handle this scenario (e.g., redirect to an error page)
-        return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('error', 'Product not found');
+                // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // staff is not logged in, redirect to homepage
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+        
+        // Fetch the product data based on the given ID
+        $data['product'] = $productModel->find($id);
+
+        // Check if the product exists
+        if (!$data['product']) {
+            // Product not found, handle this scenario (e.g., redirect to an error page)
+            return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('error', 'Product not found');
+        }
+
+        echo view('dashboard/updateProductDashboard', $data);
     }
-
-    echo view('dashboard/updateProductDashboard', $data);
-}
 
 
 public function viewAddProduct(){
@@ -291,6 +594,28 @@ public function viewAddProduct(){
 
  public function addProduct()
 {
+    // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
+
     $productModel = new AdminDashboardModel();
         $data['products'] = $productModel->findAll();
     $data['categories'] = $productModel->findAllCategories(); // Corrected line
@@ -376,6 +701,27 @@ public function viewAddProduct(){
 
 public function updateProduct($id)
 {
+        // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
     
     $productModel = new AdminDashboardModel();
         $data['product'] = $productModel->findProduct($id);
@@ -458,20 +804,42 @@ public function updateProduct($id)
 
 
     public function deleteProduct($id)
-{
-    $productModel = new AdminDashboardModel(); 
+    {
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
-    // Assuming delete method in AdminDashboardModel takes the product ID
-    $result = $productModel->delete($id);
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
 
-    if ($result) {
-        // Successful deletion, redirect to the products page with a success message
-        return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('success', 'Product deleted successfully!');
-    } else {
-        // Handle deletion failure, redirect back to the products page with an error message
-        return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('error', 'Failed to delete product');
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+                
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $productModel = new AdminDashboardModel(); 
+
+        // Assuming delete method in AdminDashboardModel takes the product ID
+        $result = $productModel->delete($id);
+
+        if ($result) {
+            // Successful deletion, redirect to the products page with a success message
+            return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('success', 'Product deleted successfully!');
+        } else {
+            // Handle deletion failure, redirect back to the products page with an error message
+            return redirect()->to(base_url('AdminDashboardController/viewProductsDashboard'))->with('error', 'Failed to delete product');
+        }
     }
-}
 
 
 
@@ -483,6 +851,28 @@ public function updateProduct($id)
 
 public function viewCategoryDashboard()
 {
+        // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
+
     $categoryModel = new AdminDashboardModel();
     $data['categories'] = $categoryModel->findAllCategories();
 
@@ -493,6 +883,28 @@ public function viewCategoryDashboard()
 
 public function viewAddCategoryDashboard()
     {
+            // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+                
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
         $categoryModel = new AdminDashboardModel();
         $data['categories'] = $categoryModel->findAll();
         echo view('dashboard/addCategoryDashboard', $data);
@@ -500,6 +912,28 @@ public function viewAddCategoryDashboard()
 
 
 public function insertCategory(){
+
+    // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
 
     //Load the validation service
     $validation = \Config\Services::validation();
@@ -570,6 +1004,28 @@ public function viewUpdateCategory($id)
 {
     $categoryModel = new AdminDashboardModel();
 
+        // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
+
     // Fetch the category data based on the given ID
     $data['category'] = $categoryModel->findCategory($id);
 
@@ -584,7 +1040,29 @@ public function viewUpdateCategory($id)
 
 public function updateCategory($id)
 {
-        $categoryModel = new AdminDashboardModel();
+    $categoryModel = new AdminDashboardModel();
+
+        // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
 
     // Fetch the category data based on the given ID
     $data['category'] = $categoryModel->findCategory($id);
@@ -676,6 +1154,28 @@ public function deleteCategory($id)
 {
     $categoryModel = new AdminDashboardModel();
 
+        // Check if the user is logged in
+    $isLoggedIn = $this->isLoggedIn();
+    $userRole = $this->getUserRole();
+
+    if (!$isLoggedIn) {
+        // Member is not logged in, redirect to errorMemberLogin
+        return redirect()->to('MemberController/index');
+    }
+
+    // Get session data
+    $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+            
+    // Pass $isLoggedIn and $userRole to the view
+    $data['isLoggedIn'] = $isLoggedIn;
+    $data['userRole'] = $userRole;
+
+    // Pass session data to the view
+    $data['email'] = $sessionData['email'] ?? '';
+    $data['first_name'] = $sessionData['first_name'] ?? '';
+    $data['last_name'] = $sessionData['last_name'] ?? '';
+    $data['user_id'] = $sessionData['user_id'] ?? '';
+
     // Assuming delete method in AdminDashboardModel takes the category ID
     $result = $categoryModel->deleteCategory($id);
 
@@ -690,15 +1190,15 @@ public function deleteCategory($id)
 
 
 
-    //log out button dashboard view
+    //log out of the admin dashboard
 	public function logout()
-{
-    // Destroy the session to log out the user
-    session()->destroy();
+    {
+        // Destroy the session to log out the user
+        session()->destroy();
 
-    // Redirect the user to the index page 
-return redirect()->to(base_url())->with('success', 'You have been successfully logged out!');
-}
+        // Redirect to the index page
+        return redirect()->to('LoginController/index');
+    }
 
 
 }
