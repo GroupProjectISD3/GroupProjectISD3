@@ -43,7 +43,9 @@ $controller_base = $base."faq.php";
 
 ?>
          
-<!-- Navbar starts -->
+<?php if ($isLoggedIn && $userRole == 'customer'): ?>
+    <!-- HTML content for logged in members -->
+     <!-- Navbar starts -->
  <div class="container-fluid mb-5">
     <div class="row border-top px-xl-5">
         <div class="col-lg-12">
@@ -58,7 +60,7 @@ $controller_base = $base."faq.php";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
                          <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -72,8 +74,8 @@ $controller_base = $base."faq.php";
                             </div>
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
-                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link text-danger">FAQ</a>
-                        <a href="<?= base_url('adminLogin') ?>" class="nav-item nav-link"> Admin</a>
+                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
+                        <p class="nav-item nav-link" style="margin: 0; font-weight: bold; color: #47acae;">Welcome, <?= $first_name ?>!</p>
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">
                         <form action="">
@@ -88,16 +90,12 @@ $controller_base = $base."faq.php";
                         </form>
                     </div>
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
-                        <?php if ($isLoggedIn): ?>
-                            <!-- Display user-specific content, like user email -->
-                            <p>Welcome, <?php echo $email; ?>!</p>
-                        <?php endif; ?>
+                        
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
                         </a>
-                        <a href="<?= base_url('portal') ?>" class="btn border">
-                            <i class="fas fa-user text-danger"></i>
-                        
+                        <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
+                            <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
                         </a>
 
                          <a href="<?= base_url('wishlist') ?>" class="btn border">
@@ -114,6 +112,68 @@ $controller_base = $base."faq.php";
             
         
 <!-- Navbar End -->
+<?php else: ?>
+    <!-- Not Logged In content -->
+     <!-- Navbar starts -->
+ <div class="container-fluid mb-5">
+    <div class="row border-top px-xl-5">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                <a href="index.html" class="text-decoration-none d-block d-lg-none">
+                    <a href="<?= base_url('index') ?>"class="text-decoration-none mr-3">
+                        <img src="<?php echo $base . "img/IconMcFaddan3.png"?>" alt="IconMcFaddan" style="width: 125px; height: 125px;">
+                    </a>
+            
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto py-0">
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
+                         <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
+                        <div class="nav-item dropdown">
+                         <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="<?= base_url('products') ?>" class="dropdown-item">Acoustic</a>
+                                 <a href="<?= base_url('products') ?>"class="dropdown-item">Eletrics</a>
+                                <a href="<?= base_url('products') ?>"class="dropdown-item">Drums</a>
+                                <a href="<?= base_url('products') ?>" class="dropdown-item">Keyboards</a>
+                              <a href="<?= base_url('products') ?>"class="dropdown-item">Accessories</a>
+                                <a href="<?= base_url('products') ?>" class="dropdown-item">Amps</a>
+                            </div>
+                        </div>
+                        <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
+                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
+                    </div>
+                    <div class="col-lg-4 col-6 ml-auto text-left">
+                        <form action="">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent text-primary">
+                                        <i class="fa fa-search text-danger"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search for products">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-6 text-right d-flex align-items-center">
+                        <a href="<?= base_url('cart') ?>"class="btn border">
+                            <i class="fas fa-shopping-cart text-danger"></i>
+                        </a>
+                        <a href="<?= base_url('portal') ?>" class="btn border">
+                            <i class="fas fa-user text-danger"></i>
+                        
+                        </a>
+</div>
+                </div>
+                </a>
+                
+            </nav>
+            
+        
+<!-- Navbar End -->
+<?php endif; ?>
 
     
             

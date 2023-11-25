@@ -25,23 +25,35 @@ class MemberController extends BaseController{
 
     }
 
-    public function index() {
+    public function errorMemberLogin(){
+        // Load the view for the index page
+        return view('errorMemberLogin');
+    }
 
+    public function index() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
 
-        // Pass $isLoggedIn to the view
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
 
         // Load the view for the index page
         return view('index', $data);
-        
     }
 
     protected function loadProducts()
@@ -53,58 +65,145 @@ class MemberController extends BaseController{
     public function faq() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
-        // Pass $isLoggedIn to the view
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
 
-        // Load the view for the other page
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        // Load the view for the faq page
         return view('faq', $data);
     }
 
 
 
     public function contact() {
+
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
-        // Pass $isLoggedIn to the view
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
 
-        // Load the view for the other page
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        // Load the view for the contact page
         return view('contact', $data);
+    }
+
+    public function account_details() {
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/errorMemberLogin');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+
+        // Load the view for the wishlist page
+        return view('account_details', $data);
     }
 
     public function wishlist() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/errorMemberLogin');
+        }
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
-        // Pass $isLoggedIn to the view
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
 
-        // Load the view for the other page
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+
+        // Load the view for the wishlist page
         return view('wishlist', $data);
     }
 
     public function cart() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
-        // Pass $isLoggedIn to the view
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
 
-        // Load the view for the other page
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        // Load the view for the contact page
         return view('cart', $data);
         
     }
@@ -112,43 +211,58 @@ class MemberController extends BaseController{
     public function checkout() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn) {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/errorMemberLogin');
+        }
 
         // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
-
-        // Pass $isLoggedIn to the view
-        $data['isLoggedIn'] = $isLoggedIn;
-
-        // Load the view for the other page
-        return view('checkout', $data);
-    }
-
-    public function adminLogin() {
-        // Check if the user is logged in
-        $isLoggedIn = $this->isLoggedIn();
-
-        // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
-
-        // Pass $isLoggedIn to the view
-        $data['isLoggedIn'] = $isLoggedIn;
-
-        // Load the view for the other page
-        return view('adminLogin', $data);
-    }
-
-    public function products() {
-        // Check if the user is logged in
-        $isLoggedIn = $this->isLoggedIn();
-
-        // Get session data
-        $data['email'] = $isLoggedIn ? $this->getMemberSessionData()['email'] : '';
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
 
-        // Pass $isLoggedIn to the view
+        
+        // Pass $isLoggedIn and $userRole to the view
         $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+
+        // Load the view for the checkout page
+        return view('checkout', $data);
+    }
+
+    
+
+    public function products() {
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
 
         // Load the view for the products page
         return view('products', $data);
@@ -177,7 +291,7 @@ class MemberController extends BaseController{
                 $hashedPassword = hash('sha256', $this->request->getPost('newPassword'));
 
                 // Register the member
-                $memberId = $this->MemberModel->registerMember(
+                $member = $this->MemberModel->registerMember(
                     $this->request->getPost('firstName'),
                     $this->request->getPost('lastName'),
                     $this->request->getPost('userName'),
@@ -185,13 +299,15 @@ class MemberController extends BaseController{
                     $hashedPassword
                 );
 
-                if ($memberId) {
+                if ($member) {
                     // Registration successful, set session data
 
                     //Load the session service
                     $session = \Config\Services::session();
                     $session->set([
-                        'member_id' => $memberId,
+                        'member_id' => $member->memberID,
+                        'first_name' =>$member->firstName,
+                        'last_name' => $member->lastName,
                         'email'     => $this->request->getPost('email'),
                         'role'      => 'customer', // Assuming 'customer' is the default role
                     ]);
@@ -208,14 +324,16 @@ class MemberController extends BaseController{
         echo view('portal'); 
     }
 
+    //Member logout
 
+    public function logout()
+    {
+        // Destroy the session
+        session()->destroy();
 
-
-
-    
-
-
-
+        // Redirect to the index page
+        return redirect()->to('MemberController/index');
+    }
 
 
 

@@ -42,8 +42,10 @@ $routes->get('/contact', 'MemberController::contact');
 $routes->get('/wishlist', 'MemberController::wishlist');
 $routes->get('/cart', 'MemberController::cart');
 $routes->get('/checkout', 'MemberController::checkout');
-$routes->get('/adminLogin', 'MemberController::adminLogin');
+$routes->get('/errorMemberLogin', 'MemberController::errorMemberLogin');
+$routes->get('/account_details', 'MemberController::account_details');
 $routes->get('/productDescription', 'MemberController::productDescription');
+$routes->get('logout', 'MemberController::logout');
 
 
 //Admin Routes

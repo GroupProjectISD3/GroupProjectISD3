@@ -57,7 +57,7 @@ $controller_base = $base."wishlist.php/";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
                          <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -72,7 +72,7 @@ $controller_base = $base."wishlist.php/";
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
                         <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
-                        <a href="<?= base_url('adminLogin') ?>" class="nav-item nav-link"> Admin</a>
+                        <p class="nav-item nav-link" style="margin: 0; font-weight: bold; color: #47acae;">Welcome, <?= $first_name ?>!</p>
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">
                         <form action="">
@@ -87,16 +87,12 @@ $controller_base = $base."wishlist.php/";
                         </form>
                     </div>
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
-                        <?php if ($isLoggedIn): ?>
-                            <!-- Display user-specific content, like user email -->
-                            <p>Welcome, <?php echo $email; ?>!</p>
-                        <?php endif; ?>
+                        
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
                         </a>
-                        <a href="<?= base_url('portal') ?>" class="btn border">
-                            <i class="fas fa-user text-danger"></i>
-                        
+                        <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
+                            <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
                         </a>
 
                          <a href="<?= base_url('wishlist') ?>" class="btn border">
@@ -113,8 +109,7 @@ $controller_base = $base."wishlist.php/";
             
         
 <!-- Navbar End -->
-
-<!-- Cart Start -->
+<!-- Wishlist Start -->
 <div class="container-fluid pt-5">
     <div class="row px-xl-10 justify-content-center"> 
         <div class="container-fluid mb-5">

@@ -57,7 +57,7 @@ $controller_base = $base."index.php/";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
                          <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -72,7 +72,6 @@ $controller_base = $base."index.php/";
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
                         <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
-                        <a href="<?= base_url('adminLogin') ?>" class="nav-item nav-link"> Admin</a>
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">
                         <form action="">
@@ -95,10 +94,6 @@ $controller_base = $base."index.php/";
                         
                         </a>
 
-                         <a href="<?= base_url('wishlist') ?>" class="btn border">
-                            <i class="fas fa-heart mr-2" style=" color:#dc3545"></i>
-                        
-                        </a>
 
                         
 </div>
@@ -148,9 +143,10 @@ $controller_base = $base."index.php/";
         </div>
         
         
-        <button type="submit" name="register" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; width: 15%;">Register</button>
+        <button type="submit" name="register" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">Register</button>
 
         <!--Add a login anchor here-->
+        <a href="<?= base_url('memberlogin') ?>" style="display: block; text-align: center; color: black; text-decoration: underline; margin-top:3%;">Have an account? Login Here</a>
     </form>
 </section>        
             

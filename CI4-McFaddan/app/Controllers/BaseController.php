@@ -66,6 +66,7 @@ abstract class BaseController extends Controller
         return \Config\Services::session();
     }
 
+    /* Can't expose users email
     protected function setMemberSessionData($memberId, $email)
     {
         $memberSession = $this->memberSession();
@@ -85,6 +86,36 @@ abstract class BaseController extends Controller
             'role'      => $memberSession->get('role'),
         ];
     }
+
+    */
+
+    protected function setMemberSessionData($member)
+    {
+        $memberSession = $this->memberSession();
+        $memberSession->set([
+            'member_id' => $member->memberID,
+            'first_name' => $member->firstName,
+            'last_name' => $member->lastName,
+            'email'     => $member->email,
+            'role'      => 'customer',
+        ]);
+    }
+
+    protected function getMemberSessionData()
+    {
+        $memberSession = $this->memberSession();
+        return [
+            'member_id' => $memberSession->get('member_id'),
+            'first_name' => $memberSession->get('first_name'),
+            'last_name' => $memberSession->get('last_name'),
+            'email'     => $memberSession->get('email'),
+            'role'      => $memberSession->get('role'),
+        ];
+    }
+
+
+
+    
 
     protected function setMemberSessionDataLogin($userId, $email, $role)
     {
