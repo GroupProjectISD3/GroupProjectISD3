@@ -37,7 +37,7 @@
 
 	helper(['url']);
 
-$base = base_url() .  "/";
+$base = base_url();
 
 $controller_base = $base."faq.php";
 
@@ -50,7 +50,7 @@ $controller_base = $base."faq.php";
             <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                 <a href="index.html" class="text-decoration-none d-block d-lg-none">
                     <a href="<?= base_url('index') ?>"class="text-decoration-none mr-3">
-                        <img src="img/IconMcFaddan3.png" alt="IconMcFaddan" style="width: 125px; height: 125px;">
+                        <img src="<?php echo $base . "img/IconMcFaddan3.png"?>" alt="IconMcFaddan" style="width: 125px; height: 125px;">
                     </a>
             
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -58,7 +58,7 @@ $controller_base = $base."faq.php";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
                          <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -72,7 +72,7 @@ $controller_base = $base."faq.php";
                             </div>
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
-                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
+                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link text-danger">FAQ</a>
                         <a href="<?= base_url('adminLogin') ?>" class="nav-item nav-link"> Admin</a>
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">

@@ -17,7 +17,8 @@ class App extends BaseConfig
      *    http://example.com/
      */
     public  $baseURL = 'http://localhost/GroupProjectISD3/CI4-McFaddan/public/';
-    public $img = 'CI4-McFaddan/public/img';
+
+    public $img = 'GroupProjectISD3/CI4-McFaddan/public/img';
 	
     public $sessionDriver            = 'CodeIgniter\Session\Handlers\FileHandler';
     public $sessionCookieName        = 'ci_session';

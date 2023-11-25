@@ -118,11 +118,11 @@ $controller_base = $base."index.php/";
         </div>
     <?php endif; ?>
     <section class="container mt-5">
-    <h2>New User Registration</h2>
+    <h2>Login</h2>
     <?php echo form_open('LoginController/authenticate'); ?>
         
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email/Username</label>
             <input type="text" class="form-control" id="email" value="<?php echo set_value('emailOrUsername'); ?>" name="emailOrUsername" placeholder="Enter your email or username" >
             <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('emailOrUsername'); }?></label>
         </div>
@@ -135,7 +135,9 @@ $controller_base = $base."index.php/";
         </div>
         
         
-        <button type="submit" name="login" class="btn btn-primary">Login</button>
+        <button type="submit" name="login" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; width: 20%;">Login</button>
+
+        <!--Add a registration anchor here-->
     </form>
 </section>        
             
@@ -144,80 +146,7 @@ $controller_base = $base."index.php/";
             
             
             
-            
-                
-          <!--- footer --->
-<div class="container-fluid" style="background-color: #f4f4f4; color: black; padding-top: 60px; padding-bottom: 60px;">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-12 mb-5 d-flex flex-column justify-content-center align-items-center">
-                <!-- Small Rectangle with "Quick Links" -->
-                <div class="rounded p-2 text-center text-white mb-3" style="background-color: #e7131a; width: 200px;">
-                    <div class="mb-2">Your Account</div>
-                </div>
-                <!-- Quick Links (left side) with Rectangle Background -->
-                <div class="rounded p-2 text-center" style="background-color: #e7131a; width: 200px;">
-                    <div class="d-flex flex-column justify-content-center text-white">
-                        <div class="mb-2">Login</div>
-                        <div class="mb-2">Order History</div>
-                        <div class="mb-2">Wish List</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 text-center mb-5">
-   
-                
-                
-                <!-- Follow Us (centered) -->
-<h5 class="font-weight-bold text-dark mb-4">Connect with Us</h5>
-<div class="d-flex justify-content-center mb-3">
-
-    <div class="mr-3">
-        <i class="fab fa-facebook-f text-dark mb-2" style="font-size: 2rem;"></i>
-        <div class="text-muted">Facebook&nbsp;&nbsp;&nbsp;</div>
-    </div>
-    <div class="mr-3">
-        <i class="fab fa-youtube text-dark mb-2" style="font-size: 2rem;"></i>
-        <div class="text-muted">YouTube&nbsp;&nbsp;&nbsp;</div>
-    </div>
-    <div class="mr-3">
-        <i class="fab fa-twitter text-dark mb-2" style="font-size: 2rem;"></i>
-        <div class="text-muted">Twitter&nbsp;&nbsp;&nbsp;</div>
-    </div>
-    <div>
-        <i class="fab fa-instagram text-dark mb-2" style="font-size: 2rem;"></i>
-        <div class="text-muted">Instagram</div>
-    </div>
-</div>
-
-</div>
-            
-            
-            
-            <!-- Quick Links (right side) -->
-
-            <div class="col-lg-4 col-md-12 text-center mb-5">
-                <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                <div class="d-flex flex-column justify-content-center">
-                    <a class="text-dark mb-2"  <a href="<?= base_url('products') ?>">
-                        <i class="fas fa-guitar fa-fw mr-2"></i>Acoustics
-                    </a>
-                    <a class="text-dark mb-2"<a href="<?= base_url('products') ?>">
-                        <i class="fas fa-plug fa-fw mr-2"></i>Eletrics
-                    </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
-                        <i class="fas fa-drum fa-fw mr-2"></i>Drums
-                    </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
-                        <i class="fas fa-keyboard fa-fw mr-2"></i>Keyboards
-                    </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
-                        <i class="fas fa-headphones fa-fw mr-2"></i>Accessories
-                    </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
-                        <i class="fas fa-volume-up fa-fw mr-2"></i>Amps
-                    </a>
-                </div>
+        
            
 
 

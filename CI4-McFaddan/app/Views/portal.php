@@ -1,3 +1,13 @@
+<?php
+
+
+    helper(['url']);
+
+$base = base_url();
+
+$controller_base = $base."index.php/";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  
 	
 	<!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?php echo $base . "img/favicon.ico"?>" rel="icon">
 
     <!--Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,16 +40,7 @@
 
 <body>
   
-<?php
 
-
-	helper(['url']);
-
-$base = base_url() .  "/";
-
-$controller_base = $base."index.php/";
-
-?>
 
    <!-- Navbar starts -->
  <div class="container-fluid mb-5">
@@ -115,8 +116,8 @@ $controller_base = $base."index.php/";
     <?php if (isset($error)): ?>
         <p><?php echo $error; ?></p>
     <?php endif; ?>
-    <section class="container mt-5">
-    <h2>New User Registration</h2>
+    <section style = "margin-bottom: 4%;"class="container mt-5">
+    <h2>New Member Registration</h2>
     <?php echo form_open('MemberController/register'); ?>
         <div class="form-group">
             <label for="firstName">First Name</label>
@@ -147,7 +148,9 @@ $controller_base = $base."index.php/";
         </div>
         
         
-        <button type="submit" name="register" class="btn btn-primary">Register</button>
+        <button type="submit" name="register" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: auto; width: 15%;">Register</button>
+
+        <!--Add a login anchor here-->
     </form>
 </section>        
             

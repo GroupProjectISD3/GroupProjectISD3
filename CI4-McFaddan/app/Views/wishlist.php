@@ -36,7 +36,7 @@
 
 	helper(['url']);
 
-$base = base_url() .  "/";
+$base = base_url();
 
 $controller_base = $base."wishlist.php/";
 
@@ -49,7 +49,7 @@ $controller_base = $base."wishlist.php/";
             <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                 <a href="index.html" class="text-decoration-none d-block d-lg-none">
                     <a href="<?= base_url('index') ?>"class="text-decoration-none mr-3">
-                        <img src="img/IconMcFaddan3.png" alt="IconMcFaddan" style="width: 125px; height: 125px;">
+                        <img src="<?php echo $base . "img/IconMcFaddan3.png"?>" alt="IconMcFaddan" style="width: 125px; height: 125px;">
                     </a>
             
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -57,7 +57,7 @@ $controller_base = $base."wishlist.php/";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
                          <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
@@ -129,7 +129,7 @@ $controller_base = $base."wishlist.php/";
                     <!-- Product content goes here -->
                 <div class="row align-items-center">
                     <div class="col-md-2">
-                        <img src="img/drums.png" alt="Drums" style="width: 100px; height: 100px; object-fit: cover;">
+                        <img src="<?php echo $base . "img/drums.png"?>" alt="Drums" style="width: 100px; height: 100px; object-fit: cover;">
                     </div>
                     <div class="col-md-4 text-black">Drum</div>
                     <div class="col-md-2 text-black">€150</div>
@@ -154,7 +154,7 @@ $controller_base = $base."wishlist.php/";
                 <!-- Product content goes here -->
                 <div class="row align-items-center">
                     <div class="col-md-2">
-                        <img src="img/accessories.png" alt="Accessories" style="width: 100px; height: 100px; object-fit: cover;">
+                        <img src="<?php echo $base . "img/drums.png"?>" alt="Accessories" style="width: 100px; height: 100px; object-fit: cover;">
                     </div>
                     <div class="col-md-4 text-black">Accessories</div>
                     <div class="col-md-2 text-black">€150</div>

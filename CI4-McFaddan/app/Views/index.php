@@ -37,7 +37,7 @@
 
 	helper(['url']);
 
-$base = base_url() .  "/";
+$base = base_url() ;
 
 $controller_base = $base."index.php/";
 
@@ -49,7 +49,7 @@ $controller_base = $base."index.php/";
             <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                 <a href="index.html" class="text-decoration-none d-block d-lg-none">
                     <a href="<?= base_url('index') ?>"class="text-decoration-none mr-3">
-                        <img src="img/IconMcFaddan3.png" alt="IconMcFaddan" style="width: 125px; height: 125px;">
+                        <img src="<?php echo $base . "img/IconMcFaddan3.png"?>" alt="IconMcFaddan" style="width: 125px; height: 125px;">
                     </a>
             
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -116,7 +116,7 @@ $controller_base = $base."index.php/";
     
             
               <!-- Topbar (BANNER) content here -->
-<div id="header-banner" class="d-flex justify-content-center align-items-center" style="height: 410px; background: url('img/banner4.png') no-repeat center center; background-size: cover;">
+<div id="header-banner" class="d-flex justify-content-center align-items-center" style="height: 410px; background: url('<?php echo $base . "img/banner4.png"?>') no-repeat center center; background-size: cover;">
     <div class="text-center">
         <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off On Your First Order</h4>
         <h3 class="display-4 text-white font-weight-semi-bold mb-4">Symphony <br>of Discounts!</h3>
@@ -139,7 +139,7 @@ $controller_base = $base."index.php/";
                 <div class="acoustics-item d-flex flex-column border mb-4" style="padding: 30px;">
                     
                      <a href="<?= base_url('products') ?>" class="acoustics-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/guitar.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/guitar.png"?>" alt="">
                     </a>
                 <h5 class="font-weight-semi-bold m-0" style="color: black;">Acoustics</h5>
                 </div>
@@ -148,7 +148,7 @@ $controller_base = $base."index.php/";
                 <div class="amps-item d-flex flex-column border mb-4" style="padding: 30px;">
                    
                     <a href="<?= base_url('products') ?>"class="amps-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/eletrics.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/eletrics.png"?>" alt="">
                     </a>
                      <h5 class="font-weight-semi-bold m-0" style="color: black;">Eletrics</h5>
                 </div>
@@ -157,7 +157,7 @@ $controller_base = $base."index.php/";
                 <div class="drums-item d-flex flex-column border mb-4" style="padding: 30px;">
                     
                     <a href="<?= base_url('products') ?>" class="drums-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/drums.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/drums.png"?>" alt="">
                     </a>
                     <h5 class="font-weight-semi-bold m-0" style="color: black;">Drums</h5>
                 </div>
@@ -166,7 +166,7 @@ $controller_base = $base."index.php/";
                 <div class="keyboards-item d-flex flex-column border mb-4" style="padding: 30px;">
                    
                     <a href="<?= base_url('products') ?>" class="keyboards-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/keyboards.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/keyboards.png"?>" alt="">
                     </a>
                     <h5 class="font-weight-semi-bold m-0" style="color: black;">Keyboards</h5>
                 </div>
@@ -175,7 +175,7 @@ $controller_base = $base."index.php/";
                 <div class="accessories-item d-flex flex-column border mb-4" style="padding: 30px;">
                   
                      <a href="<?= base_url('products') ?>" class="accessories-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/accessories.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/accessories.png"?>" alt="">
                     </a>
                      <h5 class="font-weight-semi-bold m-0" style="color: black;">Accessories</h5>
                 </div>
@@ -184,7 +184,7 @@ $controller_base = $base."index.php/";
                 <div class="amps-item d-flex flex-column border mb-4" style="padding: 30px;">
                    
                    <a href="<?= base_url('products') ?>" class="amps-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/amps.png" alt="">
+                        <img class="img-fluid" src="<?php echo $base . "img/amps.png"?>" alt="">
                     </a>
                      <h5 class="font-weight-semi-bold m-0" style="color: black;">Amps</h5>
                 </div>
@@ -203,7 +203,7 @@ $controller_base = $base."index.php/";
         <div class="col-lg-4 col-md-6 pb-1">
             <div class="acoustics-item d-flex flex-column border mb-4" style="padding: 60px; text-align: center; margin: 0 20px;"> 
                 <a href="<?= base_url('products') ?>" class="acoustics-img position-relative overflow-hidden mb-3">
-                    <img class="img-fluid w-100" src="img/landingPageSale.png" alt="">
+                    <img class="img-fluid w-100" src="<?php echo $base . "img/landingPageSale.png"?>" alt="">
                     <span class="label">Acoustics Guitars<br> On Sale!</span>
                 </a>
                 
@@ -214,7 +214,7 @@ $controller_base = $base."index.php/";
         <div class="col-lg-4 col-md-6 pb-1">
             <div class="drums-item d-flex flex-column border mb-4" style="padding: 60px; text-align: center; margin: 0 20px;"> 
                 <a href="<?= base_url('products') ?>" class="drums-img position-relative overflow-hidden mb-3">
-                    <img class="img-fluid w-100" src="img/landingPageSale2.png" alt="">
+                    <img class="img-fluid w-100" src="<?php echo $base . "img/landingPageSale2.png"?>" alt="">
                     <span class="label">Amps <br> On Sale!</span>
                 </a>
                
@@ -231,7 +231,7 @@ $controller_base = $base."index.php/";
 
             
        <!-- Banner offer Content Here -->
-<div id="second-banner" class="d-flex justify-content-start align-items-center" style="height: 410px; background: url('img/landingPageSales3Banner.png') no-repeat; background-size: contain;">
+<div id="second-banner" class="d-flex justify-content-start align-items-center" style="height: 410px; background: url('<?php echo $base . "img/landingPageSales3Banner.png"?>') no-repeat; background-size: contain;">
     <div class="text-left mx-5" style="margin-bottom: 20px;"> 
       
         <h3 class="display-4 text-white font-weight-semi-bold mb-4">Exclusive Offers <br>Just For You</h3>
