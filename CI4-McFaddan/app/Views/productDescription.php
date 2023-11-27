@@ -22,7 +22,73 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+<style>
+.product-img {
+    height: 200px;
+    overflow: hidden;
+}
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.card-body {
+    height: 80px;
+}
 
+.page-not-found {
+    padding: 40px 0;
+    background: #fbfbfb;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    width: 100%;
+}
+
+.page-not-found img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.not-found-bg {
+    background-image: url(https://cdn.dribbble.com/users/1294292/screenshots/4844920/media/c60526d282edd29e6f675058b7e278b3.gif);
+    height: 400px;
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+.not-found-bg h1,
+.not-found-bg h3 {
+    font-size: 60px;
+    color: #fff;
+    margin: 0;
+}
+
+.not-found-content {
+    margin-top: -50px;
+    color: #333;
+}
+
+.not-found-heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.not-found-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.not-found-link {
+    color: #fff!important;
+    background: #2b8688; 
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+}
+</style>
     
     
     
@@ -189,65 +255,91 @@ $controller_base = $base."productDescription.php/";
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col-lg-5 pb-5">
-               
-                    <img class="w-100 h-100" src="<?php echo $base . "img/guitar.png"?>" alt="Product Image">
-
-                       
-
+                <?php 
+                    if (is_array($productInfo)) {
+                        foreach ($productInfo as $productInformation): ?>
+                            <img class="w-100 h-100" src="<?php echo $base . "uploads/ResourceImageProduct/{$productInformation['imagePath']}"; ?>" alt="Product Image">
                     
                     
-                    
-               </div>
+                               </div>
 
 
-            <div class="col-lg-7 pb-5">
-                <h3 class="font-weight-semi-bold">Colorful Stylish Shirt</h3>
-                <div class="d-flex mb-3">
-                    <div class="text-primary mr-2">
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star-half-alt"></small>
-                        <small class="far fa-star"></small>
-                    </div>
-                   
-                </div>
-                <h3 class="font-weight-semi-bold mb-4">€123.00</h3>
-                <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
-                
-                <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3" style="width: 100px;">
-                        <div class="input-group-btn">
-                            <div class="input-group quantity" style="width: 100px;">
-                                <input type="number" class="form-control bg-white text-dark text-center" value="1">
+                            <div class="col-lg-7 pb-5">
+                                <h3 class="font-weight-semi-bold"><?php echo $productInformation['productName']; ?></h3>
+                                <div class="d-flex mb-3">
+                                    <div class="text-primary mr-2">
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star-half-alt"></small>
+                                        <small class="far fa-star"></small>
+                                    </div>
+                                   
+                                </div>
+                                <h3 class="font-weight-semi-bold mb-4">€<?php echo $productInformation['price']; ?></h3>
+                                <p class="mb-4"><?php echo $productInformation['color']; ?></p>
+                                
+                                <div class="d-flex align-items-center mb-4 pt-2">
+                                    <div class="input-group quantity mr-3" style="width: 100px;">
+                                        <div class="input-group-btn">
+                                            <div class="input-group quantity" style="width: 100px;">
+                                                <input type="number" class="form-control bg-white text-dark text-center" value="1">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <i class="far fa-heart fa-lg mr-2" style="cursor: pointer; color:#e7131a"></i>
+                                        <!--<i class="fas fa-heart" style="cursor: pointer;"></i> Swap between these two - Onclick-->
+                                      <a href="<?= base_url('cart') ?>" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white;">Add To Cart</a>
+                                    </div>
+
+                                    
+                                </div>
+
+                                
                             </div>
                         </div>
-                    </div>
+                        <div class="row px-xl-5">
+                            <div class="col">
+                                
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="tab-pane-1">
+                                        <h4 class="mb-3">Product Description</h4>
+                                        <p><?php echo $productInformation['description']; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <a href=""><?php echo $productInformation['productName']; ?></a>
+                        <?php endforeach; 
+                    } else {
+                        echo "<section class=\"page-not-found\">
+                                        <div class=\"container\">
+                                            <div class=\"row\">   
+                                                <div class=\"col-sm-12\">
+                                                    <div class=\"col-sm-10 col-sm-offset-1 text-center\">
+                                                        <div class=\"not-found-bg\">
+                                                            <h1 style=\"color:#ce1c01\">McFaddan</h1>
+                                                        </div>
 
-                    <div class="d-flex align-items-center">
-                        <i class="far fa-heart fa-lg mr-2" style="cursor: pointer; color:#e7131a"></i>
-                        <!--<i class="fas fa-heart" style="cursor: pointer;"></i> Swap between these two - Onclick-->
-                      <a href="<?= base_url('cart') ?>" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white;">Add To Cart</a>
-                    </div>
+                                                        <div class=\"not-found-content\">
+                                                            <h3 class=\"not-found-heading\">
+                                                                Hey There,
+                                                            </h3>
 
-                    
-                </div>
+                                                            <p>" . htmlspecialchars($productInfo) . "</p>
 
-                
-            </div>
-        </div>
-        <div class="row px-xl-5">
-            <div class="col">
-                
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="tab-pane-1">
-                        <h4 class="mb-3">Product Description</h4>
-                        <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
-                        <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                            <a href=\"" . base_url('index') . "\" class=\"not-found-link\">Go Back</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>";
+                    }
+                ?>
+            
             </div>
             
                           

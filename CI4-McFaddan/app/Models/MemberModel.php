@@ -81,7 +81,39 @@ class MemberModel extends Model
       return null; // Return null if no user is found
     } 
   }
-  
+
+  public function get_all_categories() {
+    $query = $this->query("CALL GetAllCategories()");
+
+    if ($query->getNumRows() > 0){
+
+      return $query->getResultArray();
+    }else{
+
+      return false;
+    }
+  }
+
+
+  public function get_products_by_category($category_id) {
+      $query = $this->query("CALL GetProductsByCategory(?)", [$category_id]);
+      
+      if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+      } else {
+        return false;
+      }
+  }
+
+  public function get_products_by_id($product_id) {
+      $query = $this->query("CALL GetProductByID(?)", [$product_id]);
+      
+      if ($query->getNumRows() > 0) {
+        return $query->getResultArray();
+      } else {
+        return false;
+      }
+  }
 
 }
 

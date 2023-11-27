@@ -20,6 +20,7 @@ class MemberController extends BaseController{
         $this->MemberModel = new MemberModel();
 
         $this->AdminDashboardModel = new AdminDashboardModel();
+        $this->pager = \Config\Services::pager();
 
         $this->db = \Config\Database::connect();
 
@@ -54,6 +55,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         // Load the view for the index page
         return view('index', $data);
@@ -263,7 +269,7 @@ class MemberController extends BaseController{
 
     
 
-    public function products() {
+    public function products($category_id) {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
         $userRole = $this->getUserRole();
@@ -288,8 +294,50 @@ class MemberController extends BaseController{
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
 
+         
+
+        $data['products'] = $this->MemberModel->get_products_by_category($category_id);
+        if ($data['products'] === false) {
+            $data['products'] = 'No products exist in the database for this category.';
+        }
+
         // Load the view for the products page
         return view('products', $data);
+           
+    }
+
+        public function productDescription($product_id) {
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $data['productInfo'] = $this->MemberModel->get_products_by_id($product_id);
+        if ($data['productInfo'] === false) {
+            $data['productInfo'] = 'Product does not exist in the database for this category.';
+        }
+
+        // Load the view for the products page
+        return view('productDescription', $data);
            
     }
 

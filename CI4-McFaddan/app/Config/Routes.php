@@ -33,7 +33,7 @@ $routes->get('updateProduct/(:num)', 'AdminDashboardController::updateProduct/$1
 
 //Member Routes
 
-$routes->get('/products', 'MemberController::products');
+$routes->get('/products/(:num)', 'MemberController::products/$1');
 $routes->get('/index', 'MemberController::index');
 $routes->get('/faq', 'MemberController::faq');
 $routes->get('/portal', 'MemberController::register');

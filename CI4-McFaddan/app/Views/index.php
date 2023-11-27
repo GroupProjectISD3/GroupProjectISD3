@@ -24,6 +24,69 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+    <style>
+        .acoustics-img img {
+            object-fit: cover; /* This will make the image cover the entire area of its container */
+            width: 100%; /* This will make the image width equal to its container's width */
+            height: 200px; /* Set a fixed height */
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        .card-body {
+            height: 80px;
+        }
+
+        .page-not-found {
+            padding: 40px 0;
+            background: #fbfbfb;
+            font-family: 'Arvo', serif;
+            text-align: center;
+            width: 100%;
+        }
+
+        .page-not-found img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .not-found-bg {
+            background-image: url(https://cdn.dribbble.com/users/1294292/screenshots/4844920/media/c60526d282edd29e6f675058b7e278b3.gif);
+            height: 400px;
+            background-position: center;
+            background-size: contain; 
+            background-repeat: no-repeat;
+        }
+
+        .not-found-bg h1,
+        .not-found-bg h3 {
+            font-size: 60px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .not-found-content {
+            margin-top: -50px;
+            color: #333;
+        }
+
+        .not-found-heading {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .not-found-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
 
     
     
@@ -134,12 +197,15 @@ $controller_base = $base."index.php/";
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Acoustic</a>
-                                 <a href="<?= base_url('products') ?>"class="dropdown-item">Eletrics</a>
-                                <a href="<?= base_url('products') ?>"class="dropdown-item">Drums</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Keyboards</a>
-                              <a href="<?= base_url('products') ?>"class="dropdown-item">Accessories</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Amps</a>
+                                <?php 
+                                    if (is_array($categories)) {
+                                        foreach ($categories as $category): ?>
+                                            <a href="<?= base_url('MemberController/products/' . $category['categoryID']) ?>" class="dropdown-item"><?php echo $category['categoryName']; ?></a>
+                                        <?php endforeach; 
+                                    } else {
+                                        echo '<p>' . $categories . '</p>';
+                                    }
+                                ?>
                             </div>
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
@@ -197,60 +263,45 @@ $controller_base = $base."index.php/";
 
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="acoustics-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    
-                     <a href="<?= base_url('products') ?>" class="acoustics-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/guitar.png"?>" alt="">
-                    </a>
-                <h5 class="font-weight-semi-bold m-0" style="color: black;">Acoustics</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="amps-item d-flex flex-column border mb-4" style="padding: 30px;">
-                   
-                    <a href="<?= base_url('products') ?>"class="amps-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/eletrics.png"?>" alt="">
-                    </a>
-                     <h5 class="font-weight-semi-bold m-0" style="color: black;">Eletrics</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="drums-item d-flex flex-column border mb-4" style="padding: 30px;">
-                    
-                    <a href="<?= base_url('products') ?>" class="drums-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/drums.png"?>" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0" style="color: black;">Drums</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="keyboards-item d-flex flex-column border mb-4" style="padding: 30px;">
-                   
-                    <a href="<?= base_url('products') ?>" class="keyboards-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/keyboards.png"?>" alt="">
-                    </a>
-                    <h5 class="font-weight-semi-bold m-0" style="color: black;">Keyboards</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="accessories-item d-flex flex-column border mb-4" style="padding: 30px;">
-                  
-                     <a href="<?= base_url('products') ?>" class="accessories-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/accessories.png"?>" alt="">
-                    </a>
-                     <h5 class="font-weight-semi-bold m-0" style="color: black;">Accessories</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 pb-1">
-                <div class="amps-item d-flex flex-column border mb-4" style="padding: 30px;">
-                   
-                   <a href="<?= base_url('products') ?>" class="amps-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="<?php echo $base . "img/amps.png"?>" alt="">
-                    </a>
-                     <h5 class="font-weight-semi-bold m-0" style="color: black;">Amps</h5>
-                </div>
-            </div>
+            <?php 
+                if (is_array($categories)) {
+                    foreach ($categories as $category): ?>
+                        <div class="col-lg-4 col-md-6 pb-1">
+                            <a href="<?= base_url('MemberController/products/' . $category['categoryID']) ?>" style="text-decoration: none; color: inherit;">
+                                <div class="acoustics-item d-flex flex-column border mb-4" style="padding: 30px;">
+                                    <div class="acoustics-img position-relative overflow-hidden mb-3">
+                                        <img class="img-fluid" src="<?php echo $base . "uploads/ResourceImage/{$category['imageCat']}"; ?>" alt="">
+                                    </div>
+                                    <h5 class="font-weight-semi-bold m-0" style="color: black;"><?php echo $category['categoryName']; ?></h5>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; 
+                } else {
+                    echo "<section class=\"page-not-found\">
+                                        <div class=\"container\">
+                                            <div class=\"row\">   
+                                                <div class=\"col-sm-12\">
+                                                    <div class=\"col-sm-10 col-sm-offset-1 text-center\">
+                                                        <div class=\"not-found-bg\">
+                                                            <h1 style=\"color:#ce1c01\">McFaddan</h1>
+                                                        </div>
+
+                                                        <div class=\"not-found-content\">
+                                                            <h3 class=\"not-found-heading\">
+                                                                Hey There,
+                                                            </h3>
+
+                                                            <p>" . htmlspecialchars($categories) . "</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>";
+                }
+            ?>
+
         </div>
     </div>
     <!-- Categories End -->
@@ -259,33 +310,7 @@ $controller_base = $base."index.php/";
    
 
 
-<!-- Deals Here -->
-<div class="container-fluid pt-5">
-    <div class="row justify-content-center"> 
-        <div class="col-lg-4 col-md-6 pb-1">
-            <div class="acoustics-item d-flex flex-column border mb-4" style="padding: 60px; text-align: center; margin: 0 20px;"> 
-                <a href="<?= base_url('products') ?>" class="acoustics-img position-relative overflow-hidden mb-3">
-                    <img class="img-fluid w-100" src="<?php echo $base . "img/landingPageSale.png"?>" alt="">
-                    <span class="label">Acoustics Guitars<br> On Sale!</span>
-                </a>
-                
-               <a href="<?= base_url('products') ?>" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Shop Now</a>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 pb-1">
-            <div class="drums-item d-flex flex-column border mb-4" style="padding: 60px; text-align: center; margin: 0 20px;"> 
-                <a href="<?= base_url('products') ?>" class="drums-img position-relative overflow-hidden mb-3">
-                    <img class="img-fluid w-100" src="<?php echo $base . "img/landingPageSale2.png"?>" alt="">
-                    <span class="label">Amps <br> On Sale!</span>
-                </a>
-               
-                 <a href="<?= base_url('products') ?>" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Shop Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Deals ends Here -->
+
             
             
 
