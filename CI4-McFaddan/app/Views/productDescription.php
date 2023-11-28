@@ -125,16 +125,18 @@ $controller_base = $base."productDescription.php/";
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                        <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
-                         <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Acoustic</a>
-                                 <a href="<?= base_url('products') ?>"class="dropdown-item">Eletrics</a>
-                                <a href="<?= base_url('products') ?>"class="dropdown-item">Drums</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Keyboards</a>
-                              <a href="<?= base_url('products') ?>"class="dropdown-item">Accessories</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Amps</a>
+                                <?php 
+                                    if (is_array($categories)) {
+                                        foreach ($categories as $category): ?>
+                                            <a href="<?= base_url('MemberController/products/' . $category['categoryID']) ?>" class="dropdown-item"><?php echo $category['categoryName']; ?></a>
+                                        <?php endforeach; 
+                                    } else {
+                                        echo '<p>' . $categories . '</p>';
+                                    }
+                                ?>
                             </div>
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
@@ -194,16 +196,18 @@ $controller_base = $base."productDescription.php/";
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                        <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
-                         <a href="<?= base_url('products') ?>" class="nav-item nav-link">Shop</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Acoustic</a>
-                                 <a href="<?= base_url('products') ?>"class="dropdown-item">Eletrics</a>
-                                <a href="<?= base_url('products') ?>"class="dropdown-item">Drums</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Keyboards</a>
-                              <a href="<?= base_url('products') ?>"class="dropdown-item">Accessories</a>
-                                <a href="<?= base_url('products') ?>" class="dropdown-item">Amps</a>
+                                <?php 
+                                    if (is_array($categories)) {
+                                        foreach ($categories as $category): ?>
+                                            <a href="<?= base_url('MemberController/products/' . $category['categoryID']) ?>" class="dropdown-item"><?php echo $category['categoryName']; ?></a>
+                                        <?php endforeach; 
+                                    } else {
+                                        echo '<p>' . $categories . '</p>';
+                                    }
+                                ?>
                             </div>
                         </div>
                         <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>

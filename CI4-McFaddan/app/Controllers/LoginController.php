@@ -30,8 +30,12 @@ class LoginController extends BaseController{
 
     public function index()
     {
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
         // This loads the memberlogin view.
-        return view('memberlogin');
+        return view('memberlogin', $data);
     }
 
     public function authenticate()
@@ -40,7 +44,10 @@ class LoginController extends BaseController{
 
         //Load the validation service
         $validation = \Config\Services::validation();
- 
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         //if the register button is clicked
         if(isset($_POST['login'])){

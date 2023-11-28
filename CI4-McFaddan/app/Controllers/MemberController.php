@@ -95,6 +95,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         // Load the view for the faq page
         return view('faq', $data);
@@ -127,6 +132,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         // Load the view for the contact page
         return view('contact', $data);
@@ -161,6 +171,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
 
         // Load the view for the wishlist page
@@ -196,6 +211,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
 
         // Load the view for the wishlist page
@@ -226,6 +246,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         // Load the view for the contact page
         return view('cart', $data);
@@ -261,6 +286,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
 
         // Load the view for the checkout page
@@ -293,7 +323,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
-
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
          
 
         $data['products'] = $this->MemberModel->get_products_by_category($category_id);
@@ -330,6 +364,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         $data['productInfo'] = $this->MemberModel->get_products_by_id($product_id);
         if ($data['productInfo'] === false) {
@@ -347,7 +386,10 @@ class MemberController extends BaseController{
         //Load the validation service
         $validation = \Config\Services::validation();
         
-
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
 
         //if the register button is clicked
         if(isset($_POST['register'])){
@@ -393,7 +435,7 @@ class MemberController extends BaseController{
                 }
             }
         }
-        echo view('portal'); 
+        echo view('portal', $data); 
     }
 
     //Member logout
