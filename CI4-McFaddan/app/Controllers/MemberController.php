@@ -258,12 +258,13 @@ class MemberController extends BaseController{
                 }
                     $data['cart'] = $cart;
             }
+            $data['cart'] = $data['cart'] ?? [];
             $subtotal = 0;
             foreach ($data['cart'] as $item) {
                 $subtotal += $item['price'] * $item['quantity'];
             }
             $data['subtotal'] = $subtotal;
-            $data['total'] = $subtotal; // Add shipping or other costs if necessary
+            $data['total'] = $subtotal; 
 
         
         // Pass $isLoggedIn and $userRole to the view
@@ -501,7 +502,23 @@ class MemberController extends BaseController{
 
             $id = $memberID ?? $userID; //returns the first operand if it exists and is not NULL; otherwise, it returns its second operand as two id's are being used to represent the logged in state of a member
 
-            $cartModel->addToCart($id, $productID, $quantity);
+            $cart = $cartModel->getCartFromDatabase($id);
+            $productExistsInCart = false;
+            foreach ($cart as $item) {
+                if ($item['productID'] == $productID) {
+                    $productExistsInCart = true;
+                    break;
+                }
+            }
+            if ($productExistsInCart) {
+                // Update the quantity of the product in the cart in the database
+                $cartModel->updateQuantityInCart($id, $productID, $quantity);
+            } else {
+                // Add the product to the cart in the database
+                $cartModel->addToCart($id, $productID, $quantity);
+            }
+
+            //$cartModel->addToCart($id, $productID, $quantity);
         } else {
 
             $cart = $session->get('cart', []);
@@ -559,7 +576,7 @@ class MemberController extends BaseController{
             $cart = $session->get('cart', []);
         }
 
-        return count($cart);
+        return is_null($cart) ? 0 : count($cart);
     }
 
 

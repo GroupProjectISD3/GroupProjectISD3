@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\MemberModel;
+use App\Controllers\MemberController;
 use App\Models\AdminDashboardModel;
 use CodeIgniter\Controller;
 
@@ -34,6 +35,12 @@ class LoginController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+
+        // Create an instance of the controller where getCartCount() is defined
+        $memberController = new MemberController();
+
+        // Call the getCartCount() function
+        $data['cartCount'] = $memberController->getCartCount();
         // This loads the memberlogin view.
         return view('memberlogin', $data);
     }
