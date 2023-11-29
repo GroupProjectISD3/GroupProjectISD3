@@ -5,7 +5,7 @@ use CodeIgniter\Model;
  
 class MemberModel extends Model
 {
-  protected $table = 'member'; // Your member table name
+  protected $table = 'member'; 
 
   public function registerMember($firstName, $lastName, $userName, $email, $password)
   {

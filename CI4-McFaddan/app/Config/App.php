@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public  $baseURL = 'http://localhost:8081/GroupProjectISD3/CI4-McFaddan/public/';
+    public  $baseURL = 'http://localhost/GroupProjectISD3/CI4-McFaddan/public/';
 
     public $img = 'GroupProjectISD3/CI4-McFaddan/public/img';
 	

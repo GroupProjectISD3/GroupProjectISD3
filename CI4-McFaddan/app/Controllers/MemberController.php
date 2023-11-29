@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\MemberModel;
 use App\Models\AdminDashboardModel;
+use App\Models\CartModel;
 use CodeIgniter\Controller;
 
 class MemberController extends BaseController{
@@ -18,7 +19,7 @@ class MemberController extends BaseController{
         helper(['form', 'url']);
         //Instance of the member model
         $this->MemberModel = new MemberModel();
-
+        $this->CartModel = new CartModel();
         $this->AdminDashboardModel = new AdminDashboardModel();
         $this->pager = \Config\Services::pager();
 
@@ -60,6 +61,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the index page
         return view('index', $data);
@@ -100,6 +102,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the faq page
         return view('faq', $data);
@@ -137,6 +140,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the contact page
         return view('contact', $data);
@@ -176,6 +180,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
 
         // Load the view for the wishlist page
@@ -216,6 +221,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
 
         // Load the view for the wishlist page
@@ -223,6 +229,8 @@ class MemberController extends BaseController{
     }
 
     public function cart() {
+        $session = \Config\Services::session();
+        $cartModel = new \App\Models\CartModel();
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
         $userRole = $this->getUserRole();
@@ -233,6 +241,29 @@ class MemberController extends BaseController{
 
         // Load products data
         $data['products'] = $this->loadProducts();
+
+            if ($this->isLoggedIn()) {
+                $memberID = $session->get('member_id');
+                $userID = $session->get('user_id');
+                $id = $memberID ?? $userID;
+                // Assuming you have a method in your model to get the cart from the database
+                $data['cart'] = $cartModel->getCartFromDatabase($id);
+            } else {
+                $cart = $session->get('cart', []);
+                if ($cart !== null) {
+                    foreach ($cart as $productID => $item) {
+                        $product = $cartModel->findProduct($productID);
+                        $cart[$productID] = array_merge($item, $product);
+                    }
+                }
+                    $data['cart'] = $cart;
+            }
+            $subtotal = 0;
+            foreach ($data['cart'] as $item) {
+                $subtotal += $item['price'] * $item['quantity'];
+            }
+            $data['subtotal'] = $subtotal;
+            $data['total'] = $subtotal; // Add shipping or other costs if necessary
 
         
         // Pass $isLoggedIn and $userRole to the view
@@ -251,6 +282,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the contact page
         return view('cart', $data);
@@ -291,6 +323,7 @@ class MemberController extends BaseController{
         if ($data['categories'] === false) {
             $data['categories'] = 'No categories exist in the database.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
 
         // Load the view for the checkout page
@@ -334,6 +367,7 @@ class MemberController extends BaseController{
         if ($data['products'] === false) {
             $data['products'] = 'No products exist in the database for this category.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the products page
         return view('products', $data);
@@ -374,6 +408,7 @@ class MemberController extends BaseController{
         if ($data['productInfo'] === false) {
             $data['productInfo'] = 'Product does not exist in the database for this category.';
         }
+        $data['cartCount'] = $this->getCartCount();
 
         // Load the view for the products page
         return view('productDescription', $data);
@@ -435,6 +470,7 @@ class MemberController extends BaseController{
                 }
             }
         }
+        $data['cartCount'] = $this->getCartCount();
         echo view('portal', $data); 
     }
 
@@ -448,6 +484,84 @@ class MemberController extends BaseController{
         // Redirect to the index page
         return redirect()->to('MemberController/index');
     }
+
+
+    //Cart - $this->CartModel
+    public function addToCart()
+    {
+        $productID = $this->request->getPost('productID');
+        $quantity = $this->request->getPost('quantity');
+
+        $session = \Config\Services::session();
+        $cartModel = new CartModel();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+
+            $id = $memberID ?? $userID; //returns the first operand if it exists and is not NULL; otherwise, it returns its second operand as two id's are being used to represent the logged in state of a member
+
+            $cartModel->addToCart($id, $productID, $quantity);
+        } else {
+
+            $cart = $session->get('cart', []);
+
+            if (isset($cart[$productID])) {
+                $cart[$productID]['quantity'] += $quantity;
+            } else {
+                $product = $cartModel->findProduct($productID);
+                $cart[$productID] = [
+                    'productID' => $productID,
+                    'quantity' => $quantity,
+                    'productName' => $product['productName'],
+                    'description' => $product['description'],
+                    'price' => $product['price'],
+                    'imagePath' => $product['imagePath'],
+                    'stockQuantity' => $product['stockQuantity'],
+                    'color' => $product['color'],
+                    'categoryID' => $product['categoryID']
+                ];
+            }
+            $session->set('cart', $cart);
+        }
+        return redirect()->to('/cart');
+    }
+
+    public function deleteFromCart($productID)
+    {
+        $session = \Config\Services::session();
+        $cartModel = new CartModel();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+            $id = $memberID ?? $userID;
+            $cartModel->deleteFromCart($id, $productID);
+        } else {
+            $cart = $session->get('cart', []);
+            unset($cart[$productID]);
+            $session->set('cart', $cart);
+        }
+        return redirect()->to('/index');
+    }
+
+    public function getCartCount()
+    {
+        $session = \Config\Services::session();
+        $cartModel = new CartModel();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+            $id = $memberID ?? $userID;
+            $cart = $cartModel->getCartFromDatabase($id);
+        } else {
+            $cart = $session->get('cart', []);
+        }
+
+        return count($cart);
+    }
+
 
 
 

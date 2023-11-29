@@ -94,6 +94,7 @@ $controller_base = $base."cart.php/";
                         
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
                             <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
@@ -163,6 +164,7 @@ $controller_base = $base."cart.php/";
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('portal') ?>" class="btn border">
                             <i class="fas fa-user text-danger"></i>
@@ -179,70 +181,48 @@ $controller_base = $base."cart.php/";
 <?php endif; ?>
 
 
+
 <!-- Cart Start -->
 <div class="container-fluid pt-5">
     <div class="row px-xl-5 justify-content-center"> 
         <div class="col-lg-8 mb-5">
           
-            <h2 class="font-weight-bold mb-4 text-black">Cart (3 items)</h2>
+            <h2 class="font-weight-bold mb-4 text-black">Cart (<?= $cartCount ?> items)</h2>
 
           
             <hr class="my-4">
-
-            <!-- Product Container Start -->
-<div class="product-container mb-3 mt-6"> 
-    <!-- Product content goes here -->
-    <div class="row align-items-center">
-        <div class="col-md-2">
-            <img src="<?php echo $base . "img/drums.png"?>" alt="Drums" style="width: 100px; height: 100px; object-fit: cover;">
-        </div>
-        <div class="col-md-4 text-black">
-            Drum
-        </div>
-        <div class="col-md-2 text-black">
-            €150
-        </div>
-        <div class="col-md-2">
-            <div class="input-group quantity" style="width: 100px;">
-                <input type="number" class="form-control bg-white text-dark text-center" value="1">
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="d-flex flex-column align-items-center">
-              <a href="<?= base_url('wishlist') ?>" class="text-decoration-none mb-2" style="color: dodgerblue;">Save for Later</a>
-               <a href="<?= base_url('') ?>"  class="text-decoration-none" style="color: dodgerblue;">Remove</a>
-            </div>
-        </div>
-    </div>
-</div>
+            <?php if ($cart !== null): ?>
+                <?php foreach ($cart as $productID => $product): ?>
+                            <!-- Product Container Start -->
+                <div class="product-container mb-3 mt-6"> 
+                    <!-- Product content goes here -->
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="<?php echo $base . "uploads/ResourceImageProduct/{$product['imagePath']}"; ?>" alt="" style="width: 100px; height: 100px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-4 text-black">
+                           <td><?= $product['productName'] ?></td>
+                        </div>
+                        <div class="col-md-2 text-black">
+                            €<td><?= $product['price'] ?></td>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="input-group quantity" style="width: 100px;">
+                                <input type="number" class="form-control bg-white text-dark text-center" value="<?= $product['quantity'] ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="d-flex flex-column align-items-center">
+                               <a href="<?= base_url('MemberController/deleteFromCart/' . $product['productID']) ?>"  class="text-decoration-none" style="color: dodgerblue;">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
 <!-- Product Container End -->
 
-<!-- Product Container Start -->
-<div class="product-container mb-3 mt-6"> 
-    <!-- Product content goes here -->
-    <div class="row align-items-center">
-        <div class="col-md-2">
-            <img src="<?php echo $base . "img/accessories.png"?>" alt="Accessories" style="width: 100px; height: 100px; object-fit: cover;">
-        </div>
-        <div class="col-md-4 text-black">
-            Accessories
-        </div>
-        <div class="col-md-2 text-black">
-            €150
-        </div>
-        <div class="col-md-2">
-            <div class="input-group quantity" style="width: 100px;">
-                <input type="number" class="form-control bg-white text-dark text-center" value="1">
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="d-flex flex-column align-items-center">
-               <a href="<?= base_url('wishlist') ?>" class="text-decoration-none mb-2" style="color: dodgerblue;">Save for Later</a>
-               <a href="<?= base_url('') ?>" class="text-decoration-none" style="color: dodgerblue;">Remove</a>
-            </div>
-        </div>
-    </div>
-</div>
+
 <hr class="my-4 ">
 <!-- Add more product containers for other products similarly -->
 
@@ -258,17 +238,17 @@ $controller_base = $base."cart.php/";
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3 pt-1">
                             <h6 class="font-weight-medium text-black">Subtotal</h6>
-                            <h6 class="font-weight-medium text-black">€450</h6>
+                            <h6 class="font-weight-medium text-black">€<?= $subtotal ?></h6>
                         </div>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium text-black">Shipping</h6>
-                            <h6 class="font-weight-medium text-black">€10</h6>
+                            <h6 class="font-weight-medium text-black">Free</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold text-black">Total</h5>
-                            <h5 class="font-weight-bold text-black">€460</h5>
+                            <h5 class="font-weight-bold text-black">€<?= $total ?></h5>
                         </div>
                        <a href="<?= base_url('checkout') ?>"  class="btn btn-lg btn-danger text-black" >Proceed To Checkout</a>
                     </div>

@@ -94,6 +94,7 @@ $controller_base = $base."wishlist.php/";
                         
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
                             <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
@@ -163,6 +164,7 @@ $controller_base = $base."wishlist.php/";
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('portal') ?>" class="btn border">
                             <i class="fas fa-user text-danger"></i>

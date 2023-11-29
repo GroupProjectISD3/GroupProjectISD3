@@ -161,6 +161,7 @@ $controller_base = $base."products.php/";
                         
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
                             <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
@@ -230,6 +231,7 @@ $controller_base = $base."products.php/";
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('portal') ?>" class="btn border">
                             <i class="fas fa-user text-danger"></i>
@@ -394,8 +396,13 @@ $controller_base = $base."products.php/";
                                             </div>
                                         </div>
                                         <div class="card-footer d-flex justify-content-between bg-light border">
-                                             <a href="<?= base_url('MemberController/productDescription/' . $product['productID']) ?>" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white;">View Detail</a>
-                                              <a href="" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white;">Add To Cart</a>
+                                             
+                                              <form action="<?= base_url('MemberController/addToCart') ?>" method="post" class="d-flex align-items-center justify-content-between" style="width: 100%;">
+                                                <a href="<?= base_url('MemberController/productDescription/' . $product['productID']) ?>" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white; flex: 1;">View Detail</a>
+                                                <input type="hidden" name="productID" value="<?= $product['productID'] ?>" style="flex: 1;" >
+                                                <input type="number" name="quantity" min="1" value="1" class=""style=" width: 10%;flex: 1;">
+                                                <button type="submit"  class="btn btn-light py-2 px-1" style="background-color: #e7131a;flex: 1; color: white;">Add To Cart</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

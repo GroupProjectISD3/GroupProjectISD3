@@ -159,6 +159,7 @@ $controller_base = $base."productDescription.php/";
                         
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('logout') ?>" class="btn border" onclick="return confirm('Are you sure you want to log out?');">
                             <i class="fas fa-sign-out-alt" style=" color:#dc3545"></i>
@@ -228,6 +229,7 @@ $controller_base = $base."productDescription.php/";
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('portal') ?>" class="btn border">
                             <i class="fas fa-user text-danger"></i>
@@ -284,19 +286,24 @@ $controller_base = $base."productDescription.php/";
                                 <p class="mb-4"><?php echo $productInformation['color']; ?></p>
                                 
                                 <div class="d-flex align-items-center mb-4 pt-2">
-                                    <div class="input-group quantity mr-3" style="width: 100px;">
-                                        <div class="input-group-btn">
-                                            <div class="input-group quantity" style="width: 100px;">
-                                                <input type="number" class="form-control bg-white text-dark text-center" value="1">
+                                    <form action="<?= base_url('MemberController/addToCart') ?>" method="post" class="d-flex align-items-center justify-content-between" >
+                                        <div class="input-group quantity mr-3" style="width: 100px;">
+                                            <div class="input-group-btn">
+                                                <div class="input-group quantity" style="width: 100px;">
+                                                    <input type="hidden" name="productID" value="<?= $productInformation['productID'] ?>" style="flex: 1;" >
+                                                    <input type="number"name="quantity" class="form-control bg-white text-dark text-center" value="1">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="d-flex align-items-center">
-                                        <i class="far fa-heart fa-lg mr-2" style="cursor: pointer; color:#e7131a"></i>
-                                        <!--<i class="fas fa-heart" style="cursor: pointer;"></i> Swap between these two - Onclick-->
-                                      <a href="<?= base_url('cart') ?>" class="btn btn-light py-2 px-1" style="background-color: #e7131a; color: white;">Add To Cart</a>
-                                    </div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="far fa-heart fa-lg mr-2" style="cursor: pointer; color:#e7131a"></i>
+                                            <!--<i class="fas fa-heart" style="cursor: pointer;"></i> Swap between these two - Onclick-->
+                                          <button type="submit"  class="btn btn-light py-2 px-1" style="background-color: #e7131a;flex: 1; color: white;">Add To Cart</button>
+                                        </div>
+                                    </form>
+
+
 
                                     
                                 </div>
@@ -315,7 +322,7 @@ $controller_base = $base."productDescription.php/";
                                 </div>
                             </div>
                         </div>
-                            <a href=""><?php echo $productInformation['productName']; ?></a>
+                            
                         <?php endforeach; 
                     } else {
                         echo "<section class=\"page-not-found\">
