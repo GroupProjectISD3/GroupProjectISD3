@@ -6,6 +6,7 @@ use App\Models\MemberModel;
 use App\Models\AdminDashboardModel;
 use App\Models\CartModel;
 use CodeIgniter\Controller;
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 class MemberController extends BaseController{
 	
@@ -319,6 +320,11 @@ class MemberController extends BaseController{
         $data['member_id'] = $sessionData['member_id'] ?? '';
 
         $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $iid = $sessionData['member_id'] ?? $sessionData['user_id'] ?? '';
+
+        $data['address'] = $this->MemberModel->getLastAddress($iid);
+
 		
 		$data['categories'] = $this->MemberModel->get_all_categories();
         if ($data['categories'] === false) {
@@ -577,6 +583,55 @@ class MemberController extends BaseController{
         }
 
         return is_null($cart) ? 0 : count($cart);
+    }
+
+    public function processPayment(){
+        \Stripe\Stripe::setApiKey('sk_test_51OHqKsDJTbFTfK1emJUJ76ZTVh0DgcfFNiagx4jW4KXcRxkvTs1F9v6QSkLPsHqifQ2xwVR1NX6Z5t5vshAKNLtW00UjpPKdpa');
+
+        $orderID = $_POST['orderID'];
+        $total = $_POST['total'];
+
+        $token = $_POST['stripeToken'];
+        error_log("Stripe Token: " . $token);
+        // Log the $_POST array
+error_log(print_r($_POST, true));
+log_message('debug', "Stripe Token: " . $token);
+
+        // Get the current date and time
+        $paymentDate = date('Y-m-d H:i:s');
+
+        try {
+            $charge = \Stripe\Charge::create([
+                'amount' => $total * 100, // amount in cents - avoid issues with floating point values
+                'currency' => 'eur', // currency
+                'description' => 'Charge for order ' . $orderID,
+                'source' => $token,
+            ]);
+            $status = 'Success: Payment Successful, please check your emails for further details';
+        } catch (\Stripe\Exception\InvalidRequestException $e) {
+            $body = $e->getJsonBody();
+            $err  = $body['error'];
+            if ($err['message'] == "You cannot use a Stripe token more than once") {
+                $status = 'Your payment has already been processed. Please do not refresh the page.';
+            } else {
+                $status = 'Error: Your payment has already been processed. Please do not refresh the page.';
+                //$status = 'Error: Your payment has already been processed. Please do not refresh the page.' . $err['message'];
+            }
+        } catch (\Stripe\Exception\AuthenticationException $e) {
+            $status = 'Error: ' . $e->getMessage();
+        } catch (\Stripe\Exception\ApiConnectionException $e) {
+            $status = 'Error: ' . $e->getMessage();
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            $status = 'Error: ' . $e->getMessage();
+        } catch (Exception $e) {
+            $status = 'Error: ' . $e->getMessage();
+        }
+
+        // Call the model function to insert the data into the database
+        $this->MemberModel->insertPayment($orderID, $paymentDate, $total, $status);
+
+        // Load the view and pass the status
+        return view('payment_view', array('status' => $status));
     }
 
 

@@ -185,6 +185,65 @@ public function memberlogin() {
         return view('dashboard/productsDashboard', $data);
     }
 
+    //Orders
+    public function viewAllOrdersDashboard(){
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $data['payments'] = $this->adminMemberInfo->getAllPayments();
+        
+        return view('Dashboard/viewAllOrdersDashboard', $data); //Display view with records and pager info
+    }
+
+    //Order details
+    public function viewOrdersDetail($orderID){
+        // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        if (!$isLoggedIn && $this->getUserRole() == 'member') {
+            // Member is not logged in, redirect to errorMemberLogin
+            return redirect()->to('MemberController/index');
+        }
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+
+        $data['orderDetails'] = $this->adminMemberInfo->getOrderDetails($orderID);
+        
+        return view('Dashboard/viewOrdersDetail', $data); //Display view with records and pager info
+    }
+
+
 
     //Customers details
     public function viewMembersDashboard(){

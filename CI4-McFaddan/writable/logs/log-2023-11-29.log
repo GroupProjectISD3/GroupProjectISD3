@@ -161,3 +161,1189 @@ INFO - 2023-11-29 08:55:10 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-11-29 08:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-11-29 08:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-11-29 08:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 17:25:57 --> require_once(vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\MemberController.php on line 9.
+ 1 APPPATH\Controllers\MemberController.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 9)
+ 2 APPPATH\Controllers\MemberController.php(9): require_once()
+ 3 SYSTEMPATH\Router\AutoRouter.php(161): include_once('C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php')
+ 4 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('MemberController/index', 'get')
+ 5 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('MemberController/index')
+ 6 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('MemberController/index')
+ 7 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 17:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 17:33:58 --> Undefined array key "orderID"
+in APPPATH\Views\cart.php on line 209.
+ 1 APPPATH\Views\cart.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "orderID"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Views\\cart.php', 209)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Views\\cart.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cart', [], true)
+ 5 APPPATH\Controllers\MemberController.php(290): view('cart', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->cart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 17:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 17:37:34 --> Undefined array key "orderID"
+in APPPATH\Views\cart.php on line 209.
+ 1 APPPATH\Views\cart.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "orderID"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Views\\cart.php', 209)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Views\\cart.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('cart', [], true)
+ 5 APPPATH\Controllers\MemberController.php(290): view('cart', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->cart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 17:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 17:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 19:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:18:43 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:31:45 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:32:10 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:34:32 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:37:30 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:38:32 --> Undefined variable $totalAmount
+in APPPATH\Controllers\MemberController.php on line 596.
+ 1 APPPATH\Controllers\MemberController.php(596): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalAmount', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 596)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:39:11 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Wp7X40TEHpSKzp?t=1701290351",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Wp7X40TEHpSKzp?t=1701290351",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Wp7X40TEHpSKzp?t=1701290351",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Wp7X40TEHpSKzp?t=1701290351",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Wp7X40TEHpSKzp?t=1701290351",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(599): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:40:45 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_KKu96Aa73PHEje?t=1701290447",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_KKu96Aa73PHEje?t=1701290447",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_KKu96Aa73PHEje?t=1701290447",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_KKu96Aa73PHEje?t=1701290447",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_KKu96Aa73PHEje?t=1701290447",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(599): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:40:54 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_M5HtlyryJjTVAx?t=1701290456",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_M5HtlyryJjTVAx?t=1701290456",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_M5HtlyryJjTVAx?t=1701290456",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_M5HtlyryJjTVAx?t=1701290456",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_M5HtlyryJjTVAx?t=1701290456",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(599): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:42:18 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_DUp7QaD6buV41v?t=1701290540",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_DUp7QaD6buV41v?t=1701290540",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_DUp7QaD6buV41v?t=1701290540",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_DUp7QaD6buV41v?t=1701290540",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_DUp7QaD6buV41v?t=1701290540",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(599): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:42:47 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:45:47 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 593.
+ 1 APPPATH\Controllers\MemberController.php(593): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 593)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 20:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:49:41 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:50:29 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:50:30 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:52:28 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:55:13 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 20:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 20:56:46 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:00:07 --> Undefined array key "stripeToken"
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stripeToken"', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 21:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:00:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 21:00:48 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_7eDRksRr5zcQRF?t=1701291650",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_7eDRksRr5zcQRF?t=1701291650",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_7eDRksRr5zcQRF?t=1701291650",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_7eDRksRr5zcQRF?t=1701291650",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_7eDRksRr5zcQRF?t=1701291650",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(601): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:03:18 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_O67QcQlHTtpYq6?t=1701291800",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_O67QcQlHTtpYq6?t=1701291800",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_O67QcQlHTtpYq6?t=1701291800",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_O67QcQlHTtpYq6?t=1701291800",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_O67QcQlHTtpYq6?t=1701291800",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(601): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 21:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 21:03:51 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eGffTuw0nANBFO?t=1701291832",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eGffTuw0nANBFO?t=1701291832",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eGffTuw0nANBFO?t=1701291832",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eGffTuw0nANBFO?t=1701291832",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eGffTuw0nANBFO?t=1701291832",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(601): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:05:26 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_pcVs7gCoctl3a9?t=1701291928",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_pcVs7gCoctl3a9?t=1701291928",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_pcVs7gCoctl3a9?t=1701291928",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_pcVs7gCoctl3a9?t=1701291928",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_pcVs7gCoctl3a9?t=1701291928",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(601): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:07:29 --> Undefined variable $stripeToken
+in APPPATH\Controllers\MemberController.php on line 590.
+ 1 APPPATH\Controllers\MemberController.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stripeToken', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 590)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:07:56 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_QUz92d3qm4pTA3?t=1701292077",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_QUz92d3qm4pTA3?t=1701292077",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_QUz92d3qm4pTA3?t=1701292077",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_QUz92d3qm4pTA3?t=1701292077",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_QUz92d3qm4pTA3?t=1701292077",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(602): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 21:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-29 21:09:42 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Eyv2ji6igm6PrY?t=1701292184",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Eyv2ji6igm6PrY?t=1701292184",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Eyv2ji6igm6PrY?t=1701292184",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Eyv2ji6igm6PrY?t=1701292184",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Eyv2ji6igm6PrY?t=1701292184",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(602): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:11:38 --> Undefined variable $stripeToken
+in APPPATH\Controllers\MemberController.php on line 593.
+ 1 APPPATH\Controllers\MemberController.php(593): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stripeToken', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 593)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 21:11:54 --> Stripe Token: 
+CRITICAL - 2023-11-29 21:11:55 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_lpjPpW3bJEKKK3?t=1701292316",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_lpjPpW3bJEKKK3?t=1701292316",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_lpjPpW3bJEKKK3?t=1701292316",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_lpjPpW3bJEKKK3?t=1701292316",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_lpjPpW3bJEKKK3?t=1701292316",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 21:17:26 --> Undefined variable $POST
+in APPPATH\Controllers\MemberController.php on line 589.
+ 1 APPPATH\Controllers\MemberController.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $POST', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 21:20:48 --> Stripe Token: 
+CRITICAL - 2023-11-29 21:20:49 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_8j46jllOcifXPt?t=1701292850",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_8j46jllOcifXPt?t=1701292850",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_8j46jllOcifXPt?t=1701292850",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_8j46jllOcifXPt?t=1701292850",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_8j46jllOcifXPt?t=1701292850",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 21:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2023-11-29 21:21:08 --> Stripe Token: 
+CRITICAL - 2023-11-29 21:21:08 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_q9v16PWhAgYfgq?t=1701292869",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_q9v16PWhAgYfgq?t=1701292869",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_q9v16PWhAgYfgq?t=1701292869",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_q9v16PWhAgYfgq?t=1701292869",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_q9v16PWhAgYfgq?t=1701292869",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 21:22:42 --> Stripe Token: 
+CRITICAL - 2023-11-29 21:22:42 --> Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_tAaPMaW9tWBGXP?t=1701292964",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null)
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs', 400, '{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_tAaPMaW9tWBGXP?t=1701292964",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), null, 'source')
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_tAaPMaW9tWBGXP?t=1701292964",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_tAaPMaW9tWBGXP?t=1701292964",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "message": "Invalid source object: must be a dictionary or a non-empty string. See API docs at https://stripe.com/docs",
+    "param": "source",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_tAaPMaW9tWBGXP?t=1701292964",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 21:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 21:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2023-11-29 22:00:12 --> Stripe Token: tok_1OHvnmDJTbFTfK1e7UGRbWqr
+CRITICAL - 2023-11-29 22:00:14 --> Undefined variable $totalAmount
+in APPPATH\Controllers\MemberController.php on line 612.
+ 1 APPPATH\Controllers\MemberController.php(612): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalAmount', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 612)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 22:01:02 --> Stripe Token: tok_1OHvnmDJTbFTfK1e7UGRbWqr
+CRITICAL - 2023-11-29 22:01:02 --> You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.', 400, '{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_sNImsnILBnL34b?t=1701295264",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), 'token_already_used')
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.', 400, '{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_sNImsnILBnL34b?t=1701295264",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), 'token_already_used', null)
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_sNImsnILBnL34b?t=1701295264",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_sNImsnILBnL34b?t=1701295264",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvnmDJTbFTfK1e7UGRbWqr.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_sNImsnILBnL34b?t=1701295264",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-29 22:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2023-11-29 22:03:57 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+CRITICAL - 2023-11-29 22:03:59 --> Undefined property: App\Controllers\MemberController::$load
+in APPPATH\Controllers\MemberController.php on line 615.
+ 1 APPPATH\Controllers\MemberController.php(615): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MemberController::$load', 'C:\\xampp\\htdocs\\GroupProjectISD3\\CI4-McFaddan\\app\\Controllers\\MemberController.php', 615)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 22:15:30 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+CRITICAL - 2023-11-29 22:15:35 --> You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.
+in VENDORPATH\stripe\stripe-php\lib\Exception\ApiErrorException.php on line 38.
+ 1 VENDORPATH\stripe\stripe-php\lib\Exception\InvalidRequestException.php(35): Stripe\Exception\ApiErrorException::factory('You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.', 400, '{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ec9czwicz6IiJD?t=1701296132",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), 'token_already_used')
+ 2 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(213): Stripe\Exception\InvalidRequestException::factory('You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.', 400, '{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ec9czwicz6IiJD?t=1701296132",
+    "type": "invalid_request_error"
+  }
+}
+', [...], Object(Stripe\Util\CaseInsensitiveArray), 'token_already_used', null)
+ 3 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(175): Stripe\ApiRequestor::_specificAPIError('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ec9czwicz6IiJD?t=1701296132",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...], [...])
+ 4 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(556): Stripe\ApiRequestor->handleErrorResponse('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ec9czwicz6IiJD?t=1701296132",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray), [...])
+ 5 VENDORPATH\stripe\stripe-php\lib\ApiRequestor.php(124): Stripe\ApiRequestor->_interpretResponse('{
+  "error": {
+    "code": "token_already_used",
+    "doc_url": "https://stripe.com/docs/error-codes/token-already-used",
+    "message": "You cannot use a Stripe token more than once: tok_1OHvrODJTbFTfK1etVqtjnLC.",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_Ec9czwicz6IiJD?t=1701296132",
+    "type": "invalid_request_error"
+  }
+}
+', 400, Object(Stripe\Util\CaseInsensitiveArray))
+ 6 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Request.php(78): Stripe\ApiRequestor->request('post', '/v1/charges', [...], [])
+ 7 VENDORPATH\stripe\stripe-php\lib\ApiOperations\Create.php(25): Stripe\ApiResource::_staticRequest('post', '/v1/charges', [...], null)
+ 8 APPPATH\Controllers\MemberController.php(603): Stripe\Charge::create([...])
+ 9 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MemberController->processPayment()
+10 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberController))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+DEBUG - 2023-11-29 22:21:01 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:21:45 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:22:47 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:22:53 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:23:09 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:24:00 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:29:54 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+DEBUG - 2023-11-29 22:31:44 --> Stripe Token: tok_1OHvrODJTbFTfK1etVqtjnLC
+INFO - 2023-11-29 22:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2023-11-29 22:44:13 --> Stripe Token: tok_1OHwUMDJTbFTfK1eBoU4cQpE
+DEBUG - 2023-11-29 22:46:37 --> Stripe Token: tok_1OHwUMDJTbFTfK1eBoU4cQpE
+INFO - 2023-11-29 22:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 22:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-29 23:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>    
 
-
+<script src="https://js.stripe.com/v3/"></script>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -24,7 +24,23 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+<style>
+    #card-element {
+        width: 100%;
+    }
 
+    .StripeElement {
+        box-sizing: border-box;
+        height: 40px;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+    }
+</style>
     
     
 </head>
@@ -39,6 +55,9 @@
 $base = base_url();
 
 $controller_base = $base."checkout.php/";
+
+$orderID = $_SESSION['orderID'];
+$total = $_SESSION['total'];
 
 ?>
 
@@ -191,39 +210,47 @@ $controller_base = $base."checkout.php/";
                 <div class="col">
                     <div class="col-md-7 ">
                         <h2>Checkout</h2>
+                            
                         
                         <!-- Change Shipping Address Section -->
                         <div class="mt-4 mb-5">
-                            <h5 class="mb-3">Change Shipping Address</h5>
+                            <?php if (!empty($address)) : ?>
+                            <h5 class="mb-3">Shipping Address</h5>
                             <form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Address 1">
+                                    <input type="text" class="form-control" placeholder="Address 1" value="<?= $address['address1'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Address 2">
+                                    <input type="text" class="form-control" placeholder="Address 2" value="<?= $address['address2'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Address 3">
+                                    <input type="text" class="form-control" placeholder="Address 3" value="<?= $address['address3'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City">
+                                    <input type="text" class="form-control" placeholder="City" value="<?= $address['city'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="County">
+                                    <input type="text" class="form-control" placeholder="County" value="<?= $address['county'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Eircode">
+                                    <input type="text" class="form-control" placeholder="Eircode" value="<?= $address['eircode'] ?>" disabled>
                                 </div>
+
+                                <div style="margin-left: 35%;">
+                                    <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#popupMcForm" style="background-color: black; border: none;">Pay Now</button>
+                                </div>  
+
                             </form>
+                            <?php else : ?>
+                                <p>Create an address in your profile to checkout.</p>
+                            <?php endif; ?>
+
                         </div>
                         
             
                         
 
-                            <div class="mb-3 text-center">
-                                <div>
-                                    <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#popupMcForm" style="background-color: black; border: none;">Pay Now</button>
-                                </div>                            
+                            <div class="mb-3 text-center">                          
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="popupMcForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -249,33 +276,30 @@ $controller_base = $base."checkout.php/";
                                                     <!-- Amount input -->
                                                      <div class="mb-3">
                                                         <label for="amount" class="form-label">Amount</label>
-                                                        <input type="text" class="form-control" id="amount" placeholder="€460.00" readonly required>
+                                                        <input type="text" class="form-control" id="amount" placeholder="€<?php echo $_SESSION['total']; ?>" readonly required>
                                                     </div>
                                                      <!-- Credit card input -->
-                                                    <div class="mb-3">
-                                                        <label for="card-number" class="form-label">Credit Card Number</label>
-                                                        <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
-                                                    </div>
-                                                    <!-- Expiration date and CVV inputs -->
-                                                    <div class="row mb-4">
-                                                        <!-- Expiration date input -->
-                                                        <div class="col-md-6">
-                                                            <label for="exp-date" class="form-label">Expiration Date</label>
-                                                            <input type="text" class="form-control" id="exp-date" placeholder="MM/YY" maxlength="5" required>
-                                                        </div>
-                                                        <!-- CVV input -->
-                                                        <div class="col-md-6">
-                                                            <label for="cvv" class="form-label">CVV</label>
-                                                            <input type="text" class="form-control" id="cvv" placeholder="123" maxlength="3" required>
-                                                        </div>
-                                                    </div>
+                                                    <form action="/GroupProjectISD3/CI4-McFaddan/public/MemberController/processPayment" method="POST" id="payment-form">
+                                                        <!-- Hidden fields for the total and other values -->
+                                                        <input type="hidden" name="total" value="<?php echo $_SESSION['total']; ?>">
+                                                        <input type="hidden" name="orderID" value="<?php echo $_SESSION['orderID']; ?>">
+                                                        <!-- Add this inside your form -->
+                                                        <input type="hidden" id="stripeToken" name="stripeToken">
 
-                                                    <div class="mb-4 text-center">
-                                                        <div>
-                                                            <button type="button" class="btn btn-primary " style="background-color: black; border: none; width: 40%;">Pay</button>
+                                                        <div class="form-row" style="width: 100%;">
+                                                            <label style="width:100%;" for="card-element">
+                                                                Credit Card Number
+                                                                <div id="card-element" class="form-control stripe-card-number"></div>
+                                                            </label>
                                                         </div>
-                    
-                                                    </div>
+
+                                                        <div class="mb-4 text-center">
+                                                            <div>
+                                                                <button type="submit" class="btn btn-primary " style="background-color: black; border: none; width: 40%;">Pay</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
                 
                                                 </div>
 
@@ -313,34 +337,15 @@ $controller_base = $base."checkout.php/";
                         </div>
                         
                         <div class="item-list">
-
-                            <!-- Shipping Information -->
-                            <div class="shipping-info row border-bottom mb-2">
-                                <span class="shipping-label col-12"><b>Address:</b><br>Thomond Village, Old Cratloe Road, Limerick, V94NN6E</span>
-                                
-                                
-                            </div>
-                
-                            <!-- List of items in the order -->
-                            <div class="item row border-bottom mb-2">
-                                <span class="product-name col-6"><b>Product:</b><br> Acoustic inst Guitar</span>
-                                <span class="quantity col-2"><b>QTY:</b><br> x2</span>
-                                <span class="subtotal col-4 "><b>Subtotal:</b><br> €450.00</span>
-                            </div>
-                            <!-- Add more items here -->
-                
-                            <!-- ShippingCost -->
-                            <div class="subtotal-row row border-bottom mb-2">
-                                <span class="total-label col-8 font-weight-bold">Shipping Cost:</span>
-                                <span class="total-amount col-4">€10.00</span>
-                                
-                            </div>
-                
                         
                             <!-- Order Total -->
                             <div class="order-total row">
+                                <span class="total-label col-8 font-weight-bold">Shipping:</span>
+                                <span class="total-amount col-4">Free</span>
+                            </div>
+                            <div class="order-total row">
                                 <span class="total-label col-8 font-weight-bold">Total:</span>
-                                <span class="total-amount col-4">€460.00</span>
+                                <span class="total-amount col-4">€<?php echo $_SESSION['total']; ?></span>
                             </div>
                         </div>
                     </div>
@@ -356,6 +361,63 @@ $controller_base = $base."checkout.php/";
             
             
             
+<script>
+    var stripe = Stripe('pk_test_51OHqKsDJTbFTfK1en8Cq6I40zECzKgvvARPFyRqGvylC40pjpbuLZV5w4CURqlVxLgDopm0vjCyNm3KdqmC09H9J00UxWpiThH');
+    var elements = stripe.elements();
+
+    var style = {
+            base: {
+        fontSize: '16px',
+        color: '#32325d',
+        '::placeholder': {
+            color: '#aab7c4'
+        }
+        },
+        invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+        }
+    };
+
+    var card = elements.create('card', {style: style});
+    card.mount('#card-element');  // Changed from '#card-number' to '#card-element'
+
+    card.addEventListener('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+    });
+
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+            if (result.error) {
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+            } else {
+                stripeTokenHandler(result.token);
+            }
+        });
+    });
+
+    function stripeTokenHandler(token) {
+        console.log("Stripe Token ID: " + token.id);
+
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.getElementById('stripeToken');
+
+        hiddenInput.value = token.id;
+
+        form.submit();
+    }
+</script>
+
+
             
                  
             <!--- footer --->

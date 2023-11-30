@@ -105,6 +105,11 @@ class MemberModel extends Model
       }
   }
 
+  public function getLastAddress($memberID)
+  {
+    return $this->query("CALL GetLastAddress(?)", $memberID)->getRowArray();
+  }
+
   public function get_products_by_id($product_id) {
       $query = $this->query("CALL GetProductByID(?)", [$product_id]);
       
@@ -113,6 +118,11 @@ class MemberModel extends Model
       } else {
         return false;
       }
+  }
+
+  public function insertPayment($orderID, $paymentDate, $totalAmount, $status) {
+    $sql = "CALL InsertPayment(?, ?, ?, ?)";
+    $this->query($sql, array($orderID, $paymentDate, $totalAmount, $status));
   }
 
 }

@@ -26,9 +26,11 @@ $routes->get('/viewMembersDashboard', 'AdminDashboardController::viewMembersDash
 $routes->get('/viewStaffsDashboard', 'AdminDashboardController::viewStaffsDashboard');
 $routes->get('/viewAddNewStaff', 'AdminDashboardController::viewAddNewStaff'); //viewAddNewStaff
 $routes->get('/viewSalesDashboard', 'AdminDashboardController::viewSalesDashboard');
+$routes->get('/viewAllOrdersDashboard', 'AdminDashboardController::viewAllOrdersDashboard');
 
 $routes->get('deleteProduct/(:num)', 'AdminDashboardController::deleteProduct/$1');//updateProductDashboard
 $routes->get('updateProduct/(:num)', 'AdminDashboardController::updateProduct/$1');
+$routes->get('viewOrdersDetail/(:num)', 'AdminDashboardController::viewOrdersDetail/$1');
 
 
 //Member Routes

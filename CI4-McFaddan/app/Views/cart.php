@@ -206,6 +206,7 @@ $controller_base = $base."cart.php/";
                         <div class="col-md-2 text-black">
                             €<td><?= $product['price'] ?></td>
                         </div>
+                        
                         <div class="col-md-2">
                             <div class="input-group quantity" style="width: 100px;">
                                 <input type="number" class="form-control bg-white text-dark text-center" value="<?= $product['quantity'] ?>">
@@ -250,7 +251,18 @@ $controller_base = $base."cart.php/";
                             <h5 class="font-weight-bold text-black">Total</h5>
                             <h5 class="font-weight-bold text-black">€<?= $total ?></h5>
                         </div>
-                       <a href="<?= base_url('checkout') ?>"  class="btn btn-lg btn-danger text-black" >Proceed To Checkout</a>
+
+                        <?php if ($cart !== null): ?>
+                            <?php foreach ($cart as $productID => $product): ?>
+                                <?php
+                                    // Store the orderID and total in the session
+                                    $_SESSION['orderID'] = isset($product['orderID']) ? $product['orderID'] : '';
+                                    $_SESSION['total'] = $total;
+                                ?>
+                                
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <a href="<?= base_url('checkout') ?>"  class="btn btn-lg btn-danger text-black" >Proceed To Checkout</a>
                     </div>
                 </div>
             </div>

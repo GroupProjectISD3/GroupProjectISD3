@@ -65,6 +65,16 @@ class AdminMemberInfo extends Model
     return $formattedResult;
   }
 
+  public function getAllPayments()
+  {
+    return $this->db->query("CALL GetAllPaymentsB()")->getResult();
+  }
+
+  public function getOrderDetails($orderID)
+  {
+    return $this->db->query("CALL GetOrderDetailsB(?)", [$orderID])->getResult();
+  }
+
 
   
 }

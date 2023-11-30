@@ -184,6 +184,16 @@ $controller_base = $base."dashboard.php/";
                             </div>
                         </div>
                     </div>
+
+                    <!-- Orders Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Orders</h2>
+                                <a href="<?= base_url('viewAllOrdersDashboard') ?>" class="btn btn-primary">Manage Orders</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             <?php elseif($isLoggedIn && $userRole == 'staff'): ?>
@@ -218,6 +228,16 @@ $controller_base = $base."dashboard.php/";
                             <div class="card-body">
                                 <h2 class="card-title">Products</h2>
                                 <a href="<?= base_url('viewProductsDashboard') ?>" class="btn btn-primary">Manage Products</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="col-lg-4">
+                        <div class="card mb-4 d-flex flex-column">
+                            <div class="card-body">
+                                <h2 class="card-title">Orders</h2>
+                                <a href="<?= base_url('') ?>" class="btn btn-primary">Manage Orders</a>
                             </div>
                         </div>
                     </div>
