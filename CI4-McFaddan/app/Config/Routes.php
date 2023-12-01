@@ -33,6 +33,7 @@ $routes->get('updateProduct/(:num)', 'AdminDashboardController::updateProduct/$1
 $routes->get('viewOrdersDetail/(:num)', 'AdminDashboardController::viewOrdersDetail/$1');
 
 
+
 //Member Routes
 
 $routes->get('/products/(:num)', 'MemberController::products/$1');
@@ -49,6 +50,7 @@ $routes->get('/account_details', 'MemberController::account_details');
 $routes->get('/productDescription', 'MemberController::productDescription');
 $routes->get('logout', 'MemberController::logout');
 $routes->get('success', 'MemberController::success');
+
 
 //Admin Routes
 
