@@ -6,9 +6,23 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = '';
-    public string $fromName   = '';
+  // Default settings
+    public string $fromEmail  = 'mcfaddaninstruments@gmail.com';
+    public string $fromName   = 'McFaddan Instruments';
     public string $recipients = '';
+
+    /**
+     * SMTP Configuration for Gmail
+     */
+    public string $SMTPHost   = 'smtp.gmail.com';
+    public string $SMTPUser   = 'mcfaddaninstruments@gmail.com'; 
+    public string $SMTPPass   = 'mmnn zywj offr rrwv'; 
+    public int $SMTPPort      = 587;
+    public string $SMTPCrypto = 'tls';
+    public string $SMTPAuth = 'login';
+
+    public bool $validate = true;
+
 
     /**
      * The "user agent"
@@ -18,7 +32,7 @@ class Email extends BaseConfig
     /**
      * The mail sending protocol: mail, sendmail, smtp
      */
-    public string $protocol = 'mail';
+    public string $protocol = 'smtp';
 
     /**
      * The server path to Sendmail.
@@ -28,32 +42,28 @@ class Email extends BaseConfig
     /**
      * SMTP Server Address
      */
-    public string $SMTPHost = '';
 
     /**
      * SMTP Username
      */
-    public string $SMTPUser = '';
-
+    
     /**
      * SMTP Password
      */
-    public string $SMTPPass = '';
 
     /**
      * SMTP Port
      */
-    public int $SMTPPort = 25;
 
     /**
      * SMTP Timeout (in seconds)
      */
-    public int $SMTPTimeout = 5;
+    public int $SMTPTimeout = 60;
 
     /**
      * Enable persistent SMTP connections
      */
-    public bool $SMTPKeepAlive = false;
+    public bool $SMTPKeepAlive = true;
 
     /**
      * SMTP Encryption.
@@ -62,7 +72,6 @@ class Email extends BaseConfig
      *             to the server. 'ssl' means implicit SSL. Connection on port
      *             465 should set this to ''.
      */
-    public string $SMTPCrypto = 'tls';
 
     /**
      * Enable word-wrap
@@ -77,7 +86,7 @@ class Email extends BaseConfig
     /**
      * Type of mail, either 'text' or 'html'
      */
-    public string $mailType = 'text';
+    public string $mailType = 'mail';
 
     /**
      * Character set (utf-8, iso-8859-1, etc.)
@@ -87,7 +96,6 @@ class Email extends BaseConfig
     /**
      * Whether to validate the email address
      */
-    public bool $validate = false;
 
     /**
      * Email Priority. 1 = highest. 5 = lowest. 3 = normal
