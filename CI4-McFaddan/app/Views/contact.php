@@ -43,6 +43,13 @@ $controller_base = $base."contact.php/";
    <?php if ($isLoggedIn && $userRole == 'member'): ?>
     <!-- HTML content for logged in members -->
      <!-- Navbar starts -->
+	 
+	 
+	 
+	 <!-- Add this section at the beginning to handle form submission -->
+<?php
+   
+?>
  <div class="container-fluid mb-5">
     <div class="row border-top px-xl-5">
         <div class="col-lg-12">
@@ -187,7 +194,7 @@ $controller_base = $base."contact.php/";
                     Contact Us
                 </div>
                 <div class="card-body">
-                    <form action="login_handler.php" method="POST">
+<form action="<?= base_url('MemberController/contactUs') ?>" method="POST">
                         <div class="mb-3 position-relative">
                             <label for="name" class="form-label visually-hidden">Your name</label>
                             <div class="input-group">
@@ -218,7 +225,7 @@ $controller_base = $base."contact.php/";
                         </div>
                         
                         <div class="text-center mb-3">
-                            <a href="contact.html" class="btn btn-primary btn-circle py-2 px-4">Send</a>
+						<button type="submit" class="btn btn-primary btn-circle py-2 px-4">Send</button>
                         </div>
                         
                         <!-- Social Media Icons -->
