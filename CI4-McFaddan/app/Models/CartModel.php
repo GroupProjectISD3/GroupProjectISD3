@@ -48,6 +48,28 @@ class CartModel extends Model{
       }
   }
 
+
+  public function addToWishlist($memberID, $productID)
+  {
+    $query = $this->query("CALL AddToWishlist(?, ?)", [$memberID, $productID]);
+    $result = $query->getResult();
+    if (count($result) < 0) {
+      return false;
+    }
+  }
+
+  public function deleteFromWishlist($memberID, $productID)
+  {
+    return $this->query("CALL DeleteFromWishlist(?, ?)", [$memberID, $productID]);
+  }
+
+  public function getWishlistFromDatabase($memberID)
+  {
+    $query = $this->query("CALL GetWishlist(?)", [$memberID]);
+    return $query->getResultArray();
+  }
+
+
 }
 
 ?>

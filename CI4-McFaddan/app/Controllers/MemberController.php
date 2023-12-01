@@ -272,6 +272,8 @@ class MemberController extends BaseController{
     }
 
     public function wishlist() {
+        $session = \Config\Services::session();
+        $cartModel = new \App\Models\CartModel();
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
         $userRole = $this->getUserRole();
@@ -287,6 +289,13 @@ class MemberController extends BaseController{
 
         // Load products data
         $data['products'] = $this->loadProducts();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+            $id = $memberID ?? $userID;
+            $data['wishlist'] = $cartModel->getWishlistFromDatabase($id);
+        }
 
         
         // Pass $isLoggedIn and $userRole to the view
@@ -330,7 +339,7 @@ class MemberController extends BaseController{
                 $memberID = $session->get('member_id');
                 $userID = $session->get('user_id');
                 $id = $memberID ?? $userID;
-                // Assuming you have a method in your model to get the cart from the database
+                
                 $data['cart'] = $cartModel->getCartFromDatabase($id);
             } else {
                 $cart = $session->get('cart', []);
@@ -633,6 +642,129 @@ class MemberController extends BaseController{
         return redirect()->to('/cart');
     }
 
+    //Add Member Address
+    public function addNewMemberAddress(){
+        $session = \Config\Services::session();
+        // Check if the user is logged in and has the 'admin' role
+        if ($this->isLoggedIn()) {
+            // Check if the user is logged in
+            $isLoggedIn = $this->isLoggedIn();
+            $userRole = $this->getUserRole();
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+
+            $id = $memberID ?? $userID;
+
+            if (!$isLoggedIn) {
+                // Member is not logged in, redirect to errorMemberLogin
+                return redirect()->to('MemberController/errorMemberLogin');
+            }
+             // Get session data
+                $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+                $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+
+                // Load products data
+                $data['products'] = $this->loadProducts();
+
+                
+                // Pass $isLoggedIn and $userRole to the view
+                $data['isLoggedIn'] = $isLoggedIn;
+                $data['userRole'] = $userRole;
+
+                // Pass session data to the view
+                $data['email'] = $sessionData['email'] ?? '';
+                $data['first_name'] = $sessionData['first_name'] ?? '';
+                $data['last_name'] = $sessionData['last_name'] ?? '';
+                $data['member_id'] = $sessionData['member_id'] ?? '';
+
+                $data['user_id'] = $sessionData['user_id'] ?? '';
+                
+                $data['categories'] = $this->MemberModel->get_all_categories();
+                if ($data['categories'] === false) {
+                    $data['categories'] = 'No categories exist in the database.';
+                }
+                $data['cartCount'] = $this->getCartCount();
+
+            //Load the validation service
+            $validation = \Config\Services::validation();
+
+                    //if the addNewStaff button is clicked
+            if(isset($_POST['submit'])){
+                //If validation does not pass
+                if (!$this->validate('addressInsertValidation')) {
+                    // Get validator details
+                    $data['validation'] = $this->validator;
+
+                    //Render view with validator errors
+                    echo view('account_details', $data);
+                }else{
+                    
+                    // Insert address
+                    $address = $this->MemberModel->insertMemberAddress(
+                        $id,
+                        $this->request->getPost('address1'),
+                        $this->request->getPost('address2'),
+                        $this->request->getPost('address3'),
+                        $this->request->getPost('city'),
+                        $this->request->getPost('county'),
+                        $this->request->getPost('eircode')    
+                    );
+
+                    if ($address) {
+                        // Redirect to the staffs dashboard or wherever needed
+                        return view('account_details', $data);
+                    } else {
+                        // Registration failed, redirect back to the registration form with an error message
+                        
+                        return redirect()->to('/cart');
+                    }
+                }
+
+
+            }
+        }
+        
+    }
+
+    //Add wishlist
+    public function addToWishlist(){
+        $productID = $this->request->getGet('productID');
+
+        $session = \Config\Services::session();
+        $cartModel = new CartModel();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+
+            $id = $memberID ?? $userID; //returns the first operand if it exists and is not NULL; otherwise, it returns its second operand as two id's are being used to represent the logged in state of a member
+
+            $wishlist = $cartModel->getWishlistFromDatabase($id);
+            $productExistsInWishlist = false;
+            foreach ($wishlist as $item) {
+                if ($item['productID'] == $productID) {
+                    $productExistsInWishlist = true;
+                    break;
+                }
+            }
+            if ($productExistsInWishlist) {
+                // Redirect the the wishlist - Fake adding the product to wishlis
+                return redirect()->to('/wishlist');
+            } else {
+                // Add the product to the wishlist in the database
+                $cartModel->addToWishlist($id, $productID);
+            }
+
+            //$cartModel->addToCart($id, $productID, $quantity);
+        } else {
+
+            //Add something here is you want users that are not members to add to wislist
+            //Store product id in session and then use the find method in the member controller to get details for that product
+        }
+        return redirect()->to('/wishlist');
+
+    }
+
     public function deleteFromCart($productID)
     {
         $session = \Config\Services::session();
@@ -647,6 +779,20 @@ class MemberController extends BaseController{
             $cart = $session->get('cart', []);
             unset($cart[$productID]);
             $session->set('cart', $cart);
+        }
+        return redirect()->to('/index');
+    }
+
+    public function deleteFromWishlist($productID)
+    {
+        $session = \Config\Services::session();
+        $cartModel = new CartModel();
+
+        if ($this->isLoggedIn()) {
+            $memberID = $session->get('member_id');
+            $userID = $session->get('user_id');
+            $id = $memberID ?? $userID;
+            $cartModel->deleteFromWishlist($id, $productID);
         }
         return redirect()->to('/index');
     }

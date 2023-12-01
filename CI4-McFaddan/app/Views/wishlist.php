@@ -180,69 +180,54 @@ $controller_base = $base."wishlist.php/";
 <!-- Navbar End -->
 <?php endif; ?>
 <!-- Wishlist Start -->
-<div class="container-fluid pt-5">
+<div class="container-fluid pt-5" style="border-bottom: 2px solid #a399ac;">
     <div class="row px-xl-10 justify-content-center"> 
-        <div class="container-fluid mb-5">
+        <div class="container-fluid mb-5" >
           
             <h2 class="font-weight-bold mb-4 text-black">Your Wishlist</h2>
 
           
             <hr class="my-4">
-
+            <?php if ($wishlist !== null): ?>
+                <?php foreach ($wishlist as $productID => $product): ?>
             <!-- Product Container Start -->
             <div class="product-container mb-3 mt-6"> 
                     <!-- Product content goes here -->
-                <div class="row align-items-center">
-                    <div class="col-md-2">
-                        <img src="<?php echo $base . "img/drums.png"?>" alt="Drums" style="width: 100px; height: 100px; object-fit: cover;">
-                    </div>
-                    <div class="col-md-4 text-black">Drum</div>
-                    <div class="col-md-2 text-black">€150</div>
-                    <div class="col-md-2">
-                        <div class="input-group quantity" style="width: 100px;">
-                            <input type="number" class="form-control bg-white text-dark text-center" value="1">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="<?php echo $base . "uploads/ResourceImageProduct/{$product['imagePath']}"; ?>" alt="" style="width: 100px; height: 100px; object-fit: cover;">
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="d-flex align-items-center">
-                             <a href="<?= base_url('cart') ?>" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Add To Cart</a>
-
-                            <a href="#" class="text-decoration-none"><i class="fas fa-heart fa-lg ml-2" style="color: #e7131a;"></i></a>
+                        <div class="col-md-4 text-black">
+                           <td><?= $product['productName'] ?></td>
+                        </div>
+                        <div class="col-md-2 text-black">
+                            €<td><?= $product['price'] ?></td>
+                        </div>
+                        
+                        
+                        <div class="col-md-2">
+                            <div class="d-flex flex-column align-items-center">
+                               <a href="<?= base_url('MemberController/deleteFromWishlist/' . $product['productID']) ?>"  class="text-decoration-none" style="color: dodgerblue;">Remove</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+
+
+        </div>
+    
+                <?php endforeach; ?>
+            <?php endif; ?>
             <!-- Product Container End -->
 
-            <!-- Product Container Start -->
-            <div class="product-container mb-3 mt-6"> 
-                <!-- Product content goes here -->
-                <div class="row align-items-center">
-                    <div class="col-md-2">
-                        <img src="<?php echo $base . "img/drums.png"?>" alt="Accessories" style="width: 100px; height: 100px; object-fit: cover;">
-                    </div>
-                    <div class="col-md-4 text-black">Accessories</div>
-                    <div class="col-md-2 text-black">€150</div>
-                    <div class="col-md-2">
-                        <div class="input-group quantity" style="width: 100px;">
-                            <input type="number" class="form-control bg-white text-dark text-center" value="1">
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="d-flex align-items-center">
-                            <a href="<?= base_url('cart') ?>"class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Add To Cart</a>
 
-                            <a href="#" class="text-decoration-none"><i class="fas fa-heart fa-lg ml-2" style="color: #e7131a;"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4 ">
 
 
                    
           <!--- footer --->
-<div class="container-fluid" style="background-color: #f4f4f4; color: black; padding-top: 60px; padding-bottom: 60px;">
+<div class="container-fluid" style="background-color: #f4f4f4; color: black; padding-top: 60px; padding-bottom: 60px; margin-top:5%;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-12 mb-5 d-flex flex-column justify-content-center align-items-center">

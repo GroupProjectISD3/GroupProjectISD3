@@ -48,7 +48,7 @@ $routes->get('/errorMemberLogin', 'MemberController::errorMemberLogin');
 $routes->get('/account_details', 'MemberController::account_details');
 $routes->get('/productDescription', 'MemberController::productDescription');
 $routes->get('logout', 'MemberController::logout');
-
+$routes->get('success', 'MemberController::success');
 
 //Admin Routes
 

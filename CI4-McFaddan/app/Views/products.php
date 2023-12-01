@@ -385,8 +385,10 @@ $controller_base = $base."products.php/";
                                 <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                                     <div class="card product-item border-0 mb-4">
                                         <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                            <i class="far fa-heart position-absolute top-0 start-0 mt-2 ms-2" style="left: 10px; cursor: pointer; color: #e7131a;"></i>
-                                            <!--<i class="fas fa-heart position-absolute top-0 start-0 mt-2 ms-2" style="left: 10px; cursor: pointer;""></i> Swap between this two - Onclick-->
+                                            <a href="<?= base_url('MemberController/addToWishlist?productID=' . $product['productID']) ?>">
+                                                <i class="far fa-heart position-absolute top-0 start-0 mt-2 ms-2" style="left: 10px; cursor: pointer; color: #e7131a;"></i>
+                                                <!--<i class="fas fa-heart position-absolute top-0 start-0 mt-2 ms-2" style="left: 10px; cursor: pointer;""></i> Swap between this two - Onclick-->
+                                            </a>
                                             <img class="img-fluid w-100" src="<?php echo $base . "uploads/ResourceImageProduct/{$product['imagePath']}"; ?>" alt="">
                                         </div>
                                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">

@@ -209,7 +209,7 @@ $controller_base = $base."cart.php/";
                         
                         <div class="col-md-2">
                             <div class="input-group quantity" style="width: 100px;">
-                                <input type="number" class="form-control bg-white text-dark text-center" value="<?= $product['quantity'] ?>">
+                                <input type="number" class="form-control bg-white text-dark text-center" value="<?= $product['quantity'] ?>" disabled>
                             </div>
                         </div>
                         <div class="col-md-2">

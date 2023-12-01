@@ -125,6 +125,12 @@ class MemberModel extends Model
     $this->query($sql, array($orderID, $paymentDate, $totalAmount, $status));
   }
 
+  public function insertMemberAddress($memberID, $address1, $address2, $address3, $city, $county, $eircode)
+  {
+    $query = $this->query('CALL insertmemberAddress(?, ?, ?, ?, ?, ?, ?)', [$memberID, $address1, $address2, $address3, $city, $county, $eircode]);
+  }
+
+
 }
 
 ?>

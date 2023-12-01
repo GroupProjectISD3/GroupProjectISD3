@@ -39,7 +39,7 @@ $base = base_url() .  "/";
 
 
 ?>
-  <?php if ($isLoggedIn && $userRole == 'member'): ?>
+   <?php if ($isLoggedIn && $userRole == 'member'): ?>
     <!-- HTML content for logged in members -->
      <!-- Navbar starts -->
  <div class="container-fluid mb-5">
@@ -77,14 +77,7 @@ $base = base_url() .  "/";
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">
                         <form action="">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-transparent text-primary">
-                                        <i class="fa fa-search text-danger"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Search for products">
-                            </div>
+                            
                         </form>
                     </div>
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
@@ -161,6 +154,7 @@ $base = base_url() .  "/";
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
                         <a href="<?= base_url('cart') ?>"class="btn border">
                             <i class="fas fa-shopping-cart text-danger"></i>
+                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
                         </a>
                         <a href="<?= base_url('portal') ?>" class="btn border">
                             <i class="fas fa-user text-danger"></i>
@@ -177,104 +171,54 @@ $base = base_url() .  "/";
 <?php endif; ?>
 
 
-<div class="container mt-5">
-    <h2>My Account Details</h2>
-
+<div class="container mt-5" style="margin-bottom:5%;">
     <section class="container mt-5">
-        <!-- Personal Details Section -->
-        <h3>Personal Details</h3>
-        <form action="update_personal_details.php" method="POST">
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" class="form-control" id="fullName" name="fullName" value="Adam Mcloughlin" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="adammc@gmail.com" required>
-            </div>
-            <!-- Add more personal details as needed -->
-            <button type="submit" class="btn btn-primary">Update Personal Details</button>
-        </form>
-    </section>
+        <!-- Billing Address Section -->
         
-    <section class="container mt-5">
-         <!-- Username and Password Section -->
-    <h3>Username and Password</h3>
-    <form action="update_username_password.php" method="POST">
-        <div class="form-group">
-            <label for="newUsername">New Username</label>
-            <input type="text" class="form-control" id="newUsername" name="newUsername" placeholder="Enter new username" required>
+        <div style="max-width: 800px; margin: auto;">
+            <h3 style="margin-bottom: 5%;">Member Address</h3>
+            <?php echo form_open_multipart('MemberController/addNewMemberAddress'); ?>
+                <div class="form-group mb-3">
+                    <label for="address1">Address 1</label>
+                    <input type="text" class="form-control" id="address1" name="address1" value="<?php echo set_value('address1'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('address1'); }?></label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="address2">Address 2</label>
+                    <input type="text" class="form-control" id="address2" name="address2" value="<?php echo set_value('address2'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('address2'); }?></label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="address3">Address 3</label>
+                    <input type="text" class="form-control" id="address3" name="address3" value="<?php echo set_value('address3'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('address3'); }?></label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" value="<?php echo set_value('city'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('city'); }?></label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="county">County</label>
+                    <input type="text" class="form-control" id="county" name="county" value="<?php echo set_value('county'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('county'); }?></label>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="eircode">Eircode</label>
+                    <input type="text" class="form-control" id="eircode" name="eircode" value="<?php echo set_value('eircode'); ?>">
+                    <label style="color: red;"><?php if (isset($validation)) { echo $validation->getError('eircode'); }?></label>
+                </div>
+                <!-- Add more billing address details as needed -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary" style="background-color: black; outline-color: black; box-shadow: black; border-color: black;"name="submit">Use Address</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="newPassword">New Password</label>
-            <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="Enter new password" required>
-        </div>
-        <div class="form-group">
-            <label for="confirmPassword">Confirm New Password</label>
-            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm new password" required>
-        </div>
-        <!-- Add more username/password details as needed -->
-        <button type="submit" class="btn btn-primary">Update Username and Password</button>
-    </form>
     </section>
-
-    <section class="container mt-5">
-    <!-- Billing Address Section -->
-    <h3>Billing Address</h3>
-    <form action="update_billing_address.php" method="POST">
-        <div class="form-group">
-            <label for="billingAddress1">Address Line 1</label>
-            <input type="text" class="form-control" id="billingAddress1" name="billingAddress1" value="11 Coonagh Court" required>
-        </div>
-        <div class="form-group">
-            <label for="billingAddress2">Address Line 2</label>
-            <input type="text" class="form-control" id="billingAddress2" name="billingAddress2" value="Doon">
-        </div>
-        <div class="form-group">
-            <label for="billingCity">City</label>
-            <input type="text" class="form-control" id="billingCity" name="billingCity" value="Limerick" required>
-        </div>
-         <div class="form-group">
-            <label for="billingEircode">Eircode</label>
-            <input type="text" class="form-control" id="billingEircode" name="billingEircode" value="V94 1234" required>
-        </div>
-        <!-- Add more billing address details as needed -->
-        <button type="submit" class="btn btn-primary">Update Billing Address</button>
-    </form>
-</section>
-
-<section class="container mt-5">
-    <!-- Payment Types Section -->
-    <h3>Payment Types</h3>
-    <form action="update_payment_types.php" method="POST">
-        <div class="form-group">
-            <label for="creditCard">Credit Card Number</label>
-            <input type="text" class="form-control" id="creditCard" name="creditCard" value="**** **** **** 1234" required>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="cardHolderName">Cardholder Name</label>
-                <input type="text" class="form-control" id="cardHolderName" name="cardHolderName" value="Adam Mcloughlin" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="expirationDate">Expiration Date</label>
-                <input type="text" class="form-control" id="expirationDate" name="expirationDate" value="MM/YY" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="cvv">CVV</label>
-            <input type="text" class="form-control" id="cvv" name="cvv" value="123" required>
-        </div>
-        <!-- Add more payment type details as needed -->
-        <button type="submit" class="btn btn-primary">Update Credit Card</button>
-    </form>
-</section>
-</div>          
+</div>
+      
             
-            
-            
-            
-            
+        
                
               
           <!--- footer --->

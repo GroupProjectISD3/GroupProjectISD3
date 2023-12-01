@@ -242,7 +242,7 @@ $total = $_SESSION['total'];
 
                             </form>
                             <?php else : ?>
-                                <p>Create an address in your profile to checkout.</p>
+                                <a href="<?= base_url('MemberController/account_details')?>"><p>Create an address in your profile to checkout.</p></a>
                             <?php endif; ?>
 
                         </div>

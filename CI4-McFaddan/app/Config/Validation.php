@@ -183,7 +183,7 @@ public $staffInsertValidation = [
     'rules' => 'required|regex_match[/^[A-Z0-9]{3} [A-Z0-9]{4}$/]',
     'errors' => [
             'required' => '{field} is required!',
-            'regex_match' => '{field} is not a valid a valid eircode'
+            'regex_match' => '{field} is not a valid a valid eircode, Try adding space in front of the routing key!'
         ]
     ],
 
@@ -324,6 +324,47 @@ public $categoryInsertValidation = [
     ]
 
 ];
+
+//Validation for address
+//Validation for staff registration
+public $addressInsertValidation = [
+    
+    'address1' => [
+        'label' => 'Address 1',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'city' => [
+        'label' => 'City',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    'county' => [
+        'label' => 'County',
+        'rules' => 'required',
+        'errors' => [
+            'required' => '{field} is required!'
+        ]
+    ],
+
+    //Valid Eircode = Routing Key (first three characters) followed by a space and then the Unique Identifier (last four characters)
+
+    'eircode' => [
+    'label' => 'Eircode',
+    'rules' => 'required|regex_match[/^[A-Z0-9]{3} [A-Z0-9]{4}$/]',
+    'errors' => [
+            'required' => '{field} is required!',
+            'regex_match' => '{field} is not a valid a valid eircode, Try adding space in front of the routing key!'
+        ]
+    ],
+];
+
 
 }
 
