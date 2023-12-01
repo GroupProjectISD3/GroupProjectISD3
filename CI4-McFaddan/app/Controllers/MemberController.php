@@ -33,6 +33,89 @@ class MemberController extends BaseController{
         return view('errorMemberLogin');
     }
 
+
+
+    public function success()
+{
+    // Check if the user is logged in
+        $isLoggedIn = $this->isLoggedIn();
+        $userRole = $this->getUserRole();
+
+        // Get session data
+        $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
+        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+
+        // Load products data
+        $data['products'] = $this->loadProducts();
+
+        
+        // Pass $isLoggedIn and $userRole to the view
+        $data['isLoggedIn'] = $isLoggedIn;
+        $data['userRole'] = $userRole;
+
+        // Pass session data to the view
+        $data['email'] = $sessionData['email'] ?? '';
+        $data['first_name'] = $sessionData['first_name'] ?? '';
+        $data['last_name'] = $sessionData['last_name'] ?? '';
+        $data['member_id'] = $sessionData['member_id'] ?? '';
+
+        $data['user_id'] = $sessionData['user_id'] ?? '';
+		
+		$data['categories'] = $this->MemberModel->get_all_categories();
+        if ($data['categories'] === false) {
+            $data['categories'] = 'No categories exist in the database.';
+        }
+        $data['cartCount'] = $this->getCartCount();
+
+        // Load the view for the faq page
+        return view('success', $data);
+}
+
+	
+	
+	 public function contactUs()
+{
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Load the form validation and email libraries
+        helper(['form', 'url']);
+        $email = \Config\Services::email();
+
+        // Define validation rules
+        $validationRules = [
+            'name' => 'required',
+            'email' => 'required|valid_email',
+            'subject' => 'required',
+            'message' => 'required',
+        ];
+
+        // Apply validation rules
+        if ($this->validate($validationRules)) {
+            // If the form is valid, you can process the form data here.
+            // For now, just redirect to a success page.
+            $data = [
+                'name' => $this->request->getPost('name'),
+                'email' => $this->request->getPost('email'),
+                'subject' => $this->request->getPost('subject'),
+                'message' => $this->request->getPost('message'),
+            ];
+
+            // Set the email parameters
+            $email->setTo('mcfaddaninstruments@gmail.com'); // Replace with your recipient's email address
+            $email->setFrom($data['email'], $data['name']);
+            $email->setSubject($data['subject']);
+            $email->setMessage($data['message']);
+
+            // Send the email
+            if ($email->send()) {
+                // Email sent successfully, you can redirect or do other actions here
+                return redirect()->to(base_url('success'));
+            } else {
+                // Email not sent, handle the error as needed
+                echo $email->printDebugger(['headers']);
+            }
+        }
+    }
+}
     public function index() {
         // Check if the user is logged in
         $isLoggedIn = $this->isLoggedIn();
