@@ -258,9 +258,10 @@ public $memberInsertValidation = [
 
     'userName' => [
         'label' => 'Username',
-        'rules' => 'required|max_length[255]',
+        'rules' => 'required|max_length[255]|is_unique[member.userName]',
         'errors' => [
             'required' => '{field} is required!',
+            'is_unique' => 'This {field} already exists.',
             'max_length' => '{field} must be less than {param} characters long.'
         ]
     ],
