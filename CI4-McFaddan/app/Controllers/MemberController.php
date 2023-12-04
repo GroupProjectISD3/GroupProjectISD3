@@ -531,7 +531,7 @@ class MemberController extends BaseController{
             if (!$this->validate('memberInsertValidation')) {
                 // Get validator details
                 $data['validation'] = $this->validator;
-
+				$data['cartCount'] = $this->getCartCount();
                 //Render view with validator errors
                 echo view('portal', $data);
             }else{
