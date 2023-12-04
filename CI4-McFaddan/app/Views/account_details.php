@@ -8,10 +8,14 @@
    
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+
+    
 
     <!--Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -39,7 +43,7 @@ $base = base_url() .  "/";
 
 
 ?>
-   <?php if ($isLoggedIn && $userRole == 'member'): ?>
+     <?php if ($isLoggedIn && $userRole == 'member'): ?>
     <!-- HTML content for logged in members -->
      <!-- Navbar starts -->
  <div class="container-fluid mb-5">
@@ -77,7 +81,14 @@ $base = base_url() .  "/";
                     </div>
                     <div class="col-lg-4 col-6 ml-auto text-left">
                         <form action="">
-                            
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-transparent text-primary">
+                                        <i class="fa fa-search text-danger"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search for products">
+                            </div>
                         </form>
                     </div>
                     <div class="col-lg-2 col-6 text-right d-flex align-items-center">
@@ -104,70 +115,6 @@ $base = base_url() .  "/";
             
         
 <!-- Navbar End -->
-<?php else: ?>
-    <!-- Not Logged In content -->
-     <!-- Navbar starts -->
- <div class="container-fluid mb-5">
-    <div class="row border-top px-xl-5">
-        <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                <a href="index.html" class="text-decoration-none d-block d-lg-none">
-                    <a href="<?= base_url('index') ?>"class="text-decoration-none mr-3">
-                        <img src="<?php echo $base . "img/IconMcFaddan3.png"?>" alt="IconMcFaddan" style="width: 125px; height: 125px;">
-                    </a>
-            
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
-                        <div class="nav-item dropdown">
-                         <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <?php 
-                                    if (is_array($categories)) {
-                                        foreach ($categories as $category): ?>
-                                            <a href="<?= base_url('MemberController/products/' . $category['categoryID']) ?>" class="dropdown-item"><?php echo $category['categoryName']; ?></a>
-                                        <?php endforeach; 
-                                    } else {
-                                        echo '<p>' . $categories . '</p>';
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                        <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
-                        <a href="<?= base_url('faq') ?>"class="nav-item nav-link">FAQ</a>
-                    </div>
-                    <div class="col-lg-4 col-6 ml-auto text-left">
-                        <form action="">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-transparent text-primary">
-                                        <i class="fa fa-search text-danger"></i>
-                                    </span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Search for products">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-2 col-6 text-right d-flex align-items-center">
-                        <a href="<?= base_url('cart') ?>"class="btn border">
-                            <i class="fas fa-shopping-cart text-danger"></i>
-                            <span class="badge badge-light" style="position: relative; top: -10px; left: -5px; color:#328f91;"><?= $cartCount ?></span>
-                        </a>
-                        <a href="<?= base_url('portal') ?>" class="btn border">
-                            <i class="fas fa-user text-danger"></i>
-                        
-                        </a>
-</div>
-                </div>
-                </a>
-                
-            </nav>
-            
-        
-<!-- Navbar End -->
 <?php endif; ?>
 
 
@@ -177,6 +124,7 @@ $base = base_url() .  "/";
         
         <div style="max-width: 800px; margin: auto;">
             <h3 style="margin-bottom: 5%;">Member Address</h3>
+            <p><?php if (isset($error)) { echo $error;} ?></p>
             <?php echo form_open_multipart('MemberController/addNewMemberAddress'); ?>
                 <div class="form-group mb-3">
                     <label for="address1">Address 1</label>
@@ -274,22 +222,22 @@ $base = base_url() .  "/";
             <div class="col-lg-4 col-md-12 text-center mb-5">
                 <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div class="d-flex flex-column justify-content-center">
-                    <a class="text-dark mb-2"  <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"  <a href="#">
                         <i class="fas fa-guitar fa-fw mr-2"></i>Acoustics
                     </a>
-                    <a class="text-dark mb-2"<a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"<a href="#">
                         <i class="fas fa-plug fa-fw mr-2"></i>Eletrics
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-drum fa-fw mr-2"></i>Drums
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-keyboard fa-fw mr-2"></i>Keyboards
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-headphones fa-fw mr-2"></i>Accessories
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-volume-up fa-fw mr-2"></i>Amps
                     </a>
                 </div>

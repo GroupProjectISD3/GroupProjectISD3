@@ -59,7 +59,7 @@ $controller_base = $base."cart.php/";
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                       <a href="<?= base_url('index') ?>"class="nav-item nav-link text-danger">Home</a>
+                       <a href="<?= base_url('index') ?>"class="nav-item nav-link">Home</a>
                         <div class="nav-item dropdown">
                          <a href="<?= base_url('products') ?>" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -331,22 +331,22 @@ $controller_base = $base."cart.php/";
             <div class="col-lg-4 col-md-12 text-center mb-5">
                 <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div class="d-flex flex-column justify-content-center">
-                    <a class="text-dark mb-2"  <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"  <a href="#">
                         <i class="fas fa-guitar fa-fw mr-2"></i>Acoustics
                     </a>
-                    <a class="text-dark mb-2"<a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"<a href="#">
                         <i class="fas fa-plug fa-fw mr-2"></i>Eletrics
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-drum fa-fw mr-2"></i>Drums
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-keyboard fa-fw mr-2"></i>Keyboards
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-headphones fa-fw mr-2"></i>Accessories
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-volume-up fa-fw mr-2"></i>Amps
                     </a>
                 </div>

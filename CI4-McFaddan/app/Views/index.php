@@ -1,3 +1,13 @@
+<?php
+
+
+    helper(['url']);
+
+$base = base_url() ;
+
+$controller_base = $base."index.php/";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +25,7 @@
 
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?php echo $base . "img/favicon.ico"?>" rel="icon">
 
     <!--Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -95,16 +105,7 @@
 <body>
     
 	
-<?php
 
-
-	helper(['url']);
-
-$base = base_url() ;
-
-$controller_base = $base."index.php/";
-
-?>
 
 <?php if ($isLoggedIn && $userRole == 'member'): ?>
     <!-- HTML content for logged in members -->
@@ -251,7 +252,7 @@ $controller_base = $base."index.php/";
     <div class="text-center">
         <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off On Your First Order</h4>
         <h3 class="display-4 text-white font-weight-semi-bold mb-4">Symphony <br>of Discounts!</h3>
-        <a href="<?= base_url('products') ?>" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Shop Now</a>
+        <a href="#" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Shop Now</a>
 
     </div>
 </div>
@@ -325,7 +326,7 @@ $controller_base = $base."index.php/";
     <div class="text-left mx-5" style="margin-bottom: 20px;"> 
       
         <h3 class="display-4 text-white font-weight-semi-bold mb-4">Exclusive Offers <br>Just For You</h3>
-        <a href="<?= base_url('products') ?>" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Explore Now</a>
+        <a href="#" class="btn btn-light py-2 px-3" style="background-color: #e7131a; color: white;">Explore Now</a>
     </div>
 </div>
 <!-- Banner offers End -->
@@ -389,22 +390,22 @@ $controller_base = $base."index.php/";
             <div class="col-lg-4 col-md-12 text-center mb-5">
                 <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div class="d-flex flex-column justify-content-center">
-                    <a class="text-dark mb-2"  <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"  <a href="#">
                         <i class="fas fa-guitar fa-fw mr-2"></i>Acoustics
                     </a>
-                    <a class="text-dark mb-2"<a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2"<a href="#">
                         <i class="fas fa-plug fa-fw mr-2"></i>Eletrics
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-drum fa-fw mr-2"></i>Drums
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-keyboard fa-fw mr-2"></i>Keyboards
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-headphones fa-fw mr-2"></i>Accessories
                     </a>
-                    <a class="text-dark mb-2" <a href="<?= base_url('products') ?>">
+                    <a class="text-dark mb-2" <a href="#">
                         <i class="fas fa-volume-up fa-fw mr-2"></i>Amps
                     </a>
                 </div>

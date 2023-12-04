@@ -128,6 +128,14 @@ class MemberModel extends Model
   public function insertMemberAddress($memberID, $address1, $address2, $address3, $city, $county, $eircode)
   {
     $query = $this->query('CALL insertmemberAddress(?, ?, ?, ?, ?, ?, ?)', [$memberID, $address1, $address2, $address3, $city, $county, $eircode]);
+
+    if ($query) {
+        // If successful, return true
+        return true;
+    } else {
+        // If not successful, return false
+        return false;
+    }
   }
 
 

@@ -395,7 +395,7 @@ class MemberController extends BaseController{
 
         // Get session data
         $sessionData = $isLoggedIn ? $this->getMemberSessionData() : [];
-        $sessionData = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
+        $sessionDataLogin = $isLoggedIn ? $this->getMemberSessionDataLogin() : [];
 
         // Load products data
         $data['products'] = $this->loadProducts();
@@ -410,12 +410,15 @@ class MemberController extends BaseController{
         $data['first_name'] = $sessionData['first_name'] ?? '';
         $data['last_name'] = $sessionData['last_name'] ?? '';
         $data['member_id'] = $sessionData['member_id'] ?? '';
+        //log_message('debug', 'Member ID: ' . $data['member_id']);
 
-        $data['user_id'] = $sessionData['user_id'] ?? '';
+        $data['user_id'] = $sessionDataLogin['user_id'] ?? '';
+        //log_message('debug', 'User ID: ' . $data['user_id']);
 
-        $iid = $sessionData['member_id'] ?? $sessionData['user_id'] ?? '';
+        $iid = $sessionData['member_id'] ?? $sessionDataLogin['user_id'] ?? '';
 
         $data['address'] = $this->MemberModel->getLastAddress($iid);
+        //log_message('debug', 'IID: ' . $iid);
 
 		
 		$data['categories'] = $this->MemberModel->get_all_categories();
@@ -711,12 +714,15 @@ class MemberController extends BaseController{
                     );
 
                     if ($address) {
-                        // Redirect to the staffs dashboard or wherever needed
-                        return view('account_details', $data);
-                    } else {
-                        // Registration failed, redirect back to the registration form with an error message
+
                         
                         return redirect()->to('/cart');
+
+                    } else {
+                        // Registration failed, redirect back to the registration form with an error message
+                        $data['error'] = "Error!, Please Try again";
+                        return view('account_details', $data);
+                        
                     }
                 }
 
@@ -725,6 +731,7 @@ class MemberController extends BaseController{
         }
         
     }
+
 
     //Add wishlist
     public function addToWishlist(){
