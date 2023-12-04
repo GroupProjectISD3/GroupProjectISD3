@@ -237,7 +237,7 @@ $controller_base = $base."dashboard.php/";
                         <div class="card mb-4 d-flex flex-column">
                             <div class="card-body">
                                 <h2 class="card-title">Orders</h2>
-                                <a href="<?= base_url('') ?>" class="btn btn-primary">Manage Orders</a>
+                                <a href="<?= base_url('viewAllOrdersDashboard') ?>" class="btn btn-primary">Manage Orders</a>
                             </div>
                         </div>
                     </div>
