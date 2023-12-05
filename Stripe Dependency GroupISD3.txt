@@ -1,0 +1,38 @@
+Try `php -v` in your command prompt and see if you get an error message. If that doesn't work or you get an error message, it means PHP is not recognizable in your system path. So navigate to your PHP folder in XAMPP (`C:\xampp\php`) using the `cd` command.
+
+It should look like this, if the first stuff doesn't work:
+>>cd C:\xampp\php
+
+Once you navigate to this directory on command prompt, add these commands:
+
+>>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+>>php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+>>php composer-setup.php
+>>php -r "unlink('composer-setup.php');"
+
+Example:
+C:\xampp\php> php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+AFTER RUNNING THOSE COMMANDS, GO TO YOUR PHP.INI FILE AND UNCOMMENT OPENSSL, MySQL AND Intl.
+
+Navigate to your CI4 project folder using the `cd` command.
+
+Type in:
+>>composer install
+
+If it works then great, if it doesn't use the following commands:
+>>composer update
+>>composer install
+
+If that doesn't work, use the full path:
+
+>>C:\xampp\php\php.exe C:\xampp\php\composer.phar install
+OR
+>>C:\xampp\php\php.exe C:\xampp\php\composer.phar update
+>>C:\xampp\php\php.exe C:\xampp\php\composer.phar install
+
+Regards,
+
+Michael Alfred (K00290602)
+Adam Mc Loughlin (K00261195)
+Gabriela Pansini (K00276534)

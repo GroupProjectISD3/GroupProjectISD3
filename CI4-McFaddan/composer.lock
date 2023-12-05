@@ -120,16 +120,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v13.4.0",
+            "version": "v13.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "ff0a56c75ff50b50ed97c45c02dfaa2dd341c5b1"
+                "reference": "a688c0ee7c0a2d162dee5c80b85d017cdd8d5e37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/ff0a56c75ff50b50ed97c45c02dfaa2dd341c5b1",
-                "reference": "ff0a56c75ff50b50ed97c45c02dfaa2dd341c5b1",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/a688c0ee7c0a2d162dee5c80b85d017cdd8d5e37",
+                "reference": "a688c0ee7c0a2d162dee5c80b85d017cdd8d5e37",
                 "shasum": ""
             },
             "require": {
@@ -173,9 +173,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v13.4.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v13.5.0"
             },
-            "time": "2023-11-21T20:08:15+00:00"
+            "time": "2023-11-30T18:11:45+00:00"
         }
     ],
     "packages-dev": [
@@ -1608,16 +1608,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.13",
+            "version": "9.6.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f3d767f7f9e191eab4189abe41ab37797e30b1be"
+                "reference": "05017b80304e0eb3f31d90194a563fd53a6021f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f3d767f7f9e191eab4189abe41ab37797e30b1be",
-                "reference": "f3d767f7f9e191eab4189abe41ab37797e30b1be",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/05017b80304e0eb3f31d90194a563fd53a6021f1",
+                "reference": "05017b80304e0eb3f31d90194a563fd53a6021f1",
                 "shasum": ""
             },
             "require": {
@@ -1691,7 +1691,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.13"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.15"
             },
             "funding": [
                 {
@@ -1707,7 +1707,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-19T05:39:22+00:00"
+            "time": "2023-12-01T16:55:19+00:00"
         },
         {
             "name": "predis/predis",

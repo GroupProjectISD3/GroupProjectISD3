@@ -98,7 +98,7 @@ class MemberController extends BaseController{
                 'subject' => $this->request->getPost('subject'),
                 'message' => $this->request->getPost('message'),
             ];
-
+			$email = \Config\Services::email();
             // Set the email parameters
             $email->setTo('mcfaddaninstruments@gmail.com'); // Replace with your recipient's email address
             $email->setFrom($data['email'], $data['name']);
